@@ -1,0 +1,53 @@
+CRITICAL - 2022-12-20 00:28:37 --> Use of undefined constant a - assumed 'a' (this will throw an Error in a future version of PHP)
+in APPPATH\Views\web\job_application.php on line 42.
+ 1 APPPATH\Views\web\job_application.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Use of undefined constant a - assumed \'a\' (this will throw an Error in a future version of PHP)', 'APPPATH\\Views\\web\\job_application.php', 42, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\web\\job_application.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('web/job_application', [], true)
+ 5 APPPATH\Controllers\Home.php(309): view('web/job_application', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->job_application()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-20 05:11:09 --> Too few arguments to function get_data_by_id(), 3 passed in C:\xampp\htdocs\test\da_sein\app\Views\Admin\Internship_application\view.php on line 39 and exactly 4 expected
+in APPPATH\Helpers\Global_helper.php on line 17.
+ 1 APPPATH\Views\Admin\Internship_application\view.php(39): get_data_by_id('intern_sem_name', 'intern_sem', 'intern_sem_id1')
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\Internship_application\\view.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Admin/Internship_application/view', [], true)
+ 5 APPPATH\Controllers\Admin\Internship_application.php(51): view('Admin/Internship_application/view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Admin\Internship_application->view('1')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Internship_application))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-20 05:25:30 --> Cannot use [] for reading
+in APPPATH\Views\Admin\Internship_application\view.php on line 87.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-12-20 06:24:41 --> Call to undefined function getFlashdata()
+in APPPATH\Views\Admin\Internship_application\view.php on line 26.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Admin/Internship_application/view', [], true)
+ 4 APPPATH\Controllers\Admin\Internship_application.php(51): view('Admin/Internship_application/view', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Admin\Internship_application->view('1')
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Internship_application))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-20 07:18:02 --> syntax error, unexpected ';'
+in APPPATH\Views\Admin\Job_application\view.php on line 133.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Admin/Job_application/view', [], true)
+ 3 APPPATH\Controllers\Admin\Job_application.php(51): view('Admin/Job_application/view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Admin\Job_application->view('1')
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Job_application))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-20 07:18:16 --> syntax error, unexpected ';'
+in APPPATH\Views\Admin\Job_application\view.php on line 133.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Admin/Job_application/view', [], true)
+ 3 APPPATH\Controllers\Admin\Job_application.php(51): view('Admin/Job_application/view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Admin\Job_application->view('1')
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Job_application))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

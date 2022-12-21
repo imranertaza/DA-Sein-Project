@@ -1,0 +1,40 @@
+
+#example1_filter{
+    float: right;
+}
+#example1_paginate{
+    float: right;
+}
+
+.head-cash{
+    position: absolute;
+    left: 60px;
+    top: 10px;
+    color: #ffffff;
+    font-size: 18px;
+}
+#dashp{
+    color: #FFFFFF;
+    font-size: 22px;
+}
+#btnSize{
+    height: 35px;
+    padding: 8px;
+}
+
+.content-wrapper{
+    margin-top: 50px ;
+}
+.short_img{
+    width: 100%;
+}
+.img-200{
+    width: 200px;
+}
+.img-150{
+    width: 150px;
+}
+
+.img-100-p{
+    width: 100%;
+}

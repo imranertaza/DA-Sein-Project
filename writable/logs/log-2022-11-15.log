@@ -1,0 +1,78 @@
+CRITICAL - 2022-11-15 04:38:30 --> Invalid argument supplied for foreach()
+in APPPATH\Views\Admin\Slider\list.php on line 47.
+ 1 APPPATH\Views\Admin\Slider\list.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argument supplied for foreach()', 'APPPATH\\Views\\Admin\\Slider\\list.php', 47, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\Slider\\list.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Admin/Slider/list', [], true)
+ 5 APPPATH\Controllers\Admin\Slider.php(32): view('Admin/Slider/list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Admin\Slider->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Slider))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-11-15 04:47:49 --> mysqli_sql_exception: Unknown column 'createdBy' in 'field list' in C:\xampp\htdocs\test\da_sein\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\test\da_sein\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `sl...', 0)
+#1 C:\xampp\htdocs\test\da_sein\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sl...')
+#2 C:\xampp\htdocs\test\da_sein\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sl...')
+#3 C:\xampp\htdocs\test\da_sein\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sl...', Array, false)
+#4 C:\xampp\htdocs\test\da_sein\app\Controllers\Admin\Slider.php(88): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\test\da_sein\system\CodeIgniter.php(904): App\Controllers\Admin\Slider->create_action()
+#6 C:\xampp\htdocs\test\da_sein\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Slider))
+#7 C:\xampp\htdocs\test\da_sein\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\test\da_sein\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2022-11-15 04:49:08 --> mysqli_sql_exception: Unknown column 'createdBy' in 'field list' in C:\xampp\htdocs\test\da_sein\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\test\da_sein\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `sl...', 0)
+#1 C:\xampp\htdocs\test\da_sein\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sl...')
+#2 C:\xampp\htdocs\test\da_sein\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sl...')
+#3 C:\xampp\htdocs\test\da_sein\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sl...', Array, false)
+#4 C:\xampp\htdocs\test\da_sein\app\Controllers\Admin\Slider.php(86): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\test\da_sein\system\CodeIgniter.php(904): App\Controllers\Admin\Slider->create_action()
+#6 C:\xampp\htdocs\test\da_sein\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Slider))
+#7 C:\xampp\htdocs\test\da_sein\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\test\da_sein\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2022-11-15 04:50:43 --> mysqli_sql_exception: Unknown column 'createdBy' in 'field list' in C:\xampp\htdocs\test\da_sein\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\test\da_sein\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `sl...', 0)
+#1 C:\xampp\htdocs\test\da_sein\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sl...')
+#2 C:\xampp\htdocs\test\da_sein\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sl...')
+#3 C:\xampp\htdocs\test\da_sein\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sl...', Array, false)
+#4 C:\xampp\htdocs\test\da_sein\app\Controllers\Admin\Slider.php(86): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\test\da_sein\system\CodeIgniter.php(904): App\Controllers\Admin\Slider->create_action()
+#6 C:\xampp\htdocs\test\da_sein\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Slider))
+#7 C:\xampp\htdocs\test\da_sein\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\test\da_sein\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2022-11-15 04:50:54 --> mysqli_sql_exception: Unknown column 'createdBy' in 'field list' in C:\xampp\htdocs\test\da_sein\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\test\da_sein\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `sl...', 0)
+#1 C:\xampp\htdocs\test\da_sein\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sl...')
+#2 C:\xampp\htdocs\test\da_sein\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sl...')
+#3 C:\xampp\htdocs\test\da_sein\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sl...', Array, false)
+#4 C:\xampp\htdocs\test\da_sein\app\Controllers\Admin\Slider.php(86): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\test\da_sein\system\CodeIgniter.php(904): App\Controllers\Admin\Slider->create_action()
+#6 C:\xampp\htdocs\test\da_sein\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Slider))
+#7 C:\xampp\htdocs\test\da_sein\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\test\da_sein\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-11-15 05:19:52 --> Invalid argument supplied for foreach()
+in APPPATH\Views\web\index.php on line 6.
+ 1 APPPATH\Views\web\index.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argument supplied for foreach()', 'APPPATH\\Views\\web\\index.php', 6, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\web\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('web/index', [], true)
+ 5 APPPATH\Controllers\Home.php(21): view('web/index')
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-15 07:38:21 --> unlink(C:\xampp\htdocs\test\da_sein\public\/uploads/news_img/news_1668519452_a851dcdb0d40a9b71d77.jpg): No such file or directory
+in APPPATH\Controllers\Admin\News.php on line 193.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(C:\\xampp\\htdocs\\test\\da_sein\\public\\/uploads/news_img/news_1668519452_a851dcdb0d40a9b71d77.jpg): No such file or directory', 'APPPATH\\Controllers\\Admin\\News.php', 193, [...])
+ 2 APPPATH\Controllers\Admin\News.php(193): unlink('FCPATH\\/uploads/news_img/news_1668519452_a851dcdb0d40a9b71d77.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Admin\News->delete('8')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\News))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

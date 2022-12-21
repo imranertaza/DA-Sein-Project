@@ -1,0 +1,314 @@
+ERROR - 2022-11-10 04:36:37 --> mysqli_sql_exception: Unknown column 'escapeChar' in 'field list' in C:\xampp\htdocs\test\shohozhisab\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\test\shohozhisab\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `bi...', 0)
+#1 C:\xampp\htdocs\test\shohozhisab\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `bi...')
+#2 C:\xampp\htdocs\test\shohozhisab\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `bi...')
+#3 C:\xampp\htdocs\test\shohozhisab\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bi...', Array, false)
+#4 C:\xampp\htdocs\test\shohozhisab\app\Controllers\Home.php(66): CodeIgniter\Database\BaseBuilder->insert(Object(CodeIgniter\Database\MySQLi\Builder))
+#5 C:\xampp\htdocs\test\shohozhisab\system\CodeIgniter.php(904): App\Controllers\Home->action()
+#6 C:\xampp\htdocs\test\shohozhisab\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\test\shohozhisab\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\test\shohozhisab\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-11-10 04:36:37 --> Call to a member function setFlashdata() on null
+in APPPATH\Controllers\Home.php on line 68.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->action()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-11-10 04:37:18 --> mysqli_sql_exception: Unknown column 'escapeChar' in 'field list' in C:\xampp\htdocs\test\shohozhisab\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\test\shohozhisab\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `bi...', 0)
+#1 C:\xampp\htdocs\test\shohozhisab\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `bi...')
+#2 C:\xampp\htdocs\test\shohozhisab\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `bi...')
+#3 C:\xampp\htdocs\test\shohozhisab\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bi...', Array, false)
+#4 C:\xampp\htdocs\test\shohozhisab\app\Controllers\Home.php(66): CodeIgniter\Database\BaseBuilder->insert(Object(CodeIgniter\Database\MySQLi\Builder))
+#5 C:\xampp\htdocs\test\shohozhisab\system\CodeIgniter.php(904): App\Controllers\Home->action()
+#6 C:\xampp\htdocs\test\shohozhisab\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\test\shohozhisab\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\test\shohozhisab\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-11-10 04:37:18 --> Call to a member function setFlashdata() on null
+in APPPATH\Controllers\Home.php on line 68.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->action()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-11-10 04:38:15 --> mysqli_sql_exception: Unknown column 'escapeChar' in 'field list' in C:\xampp\htdocs\test\shohozhisab\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\test\shohozhisab\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `bi...', 0)
+#1 C:\xampp\htdocs\test\shohozhisab\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `bi...')
+#2 C:\xampp\htdocs\test\shohozhisab\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `bi...')
+#3 C:\xampp\htdocs\test\shohozhisab\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bi...', Array, false)
+#4 C:\xampp\htdocs\test\shohozhisab\app\Controllers\Home.php(66): CodeIgniter\Database\BaseBuilder->insert(Object(CodeIgniter\Database\MySQLi\Builder))
+#5 C:\xampp\htdocs\test\shohozhisab\system\CodeIgniter.php(904): App\Controllers\Home->action()
+#6 C:\xampp\htdocs\test\shohozhisab\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\test\shohozhisab\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\test\shohozhisab\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-11-10 04:38:15 --> Call to a member function setFlashdata() on null
+in APPPATH\Controllers\Home.php on line 68.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->action()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-11-10 04:38:17 --> mysqli_sql_exception: Unknown column 'escapeChar' in 'field list' in C:\xampp\htdocs\test\shohozhisab\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\test\shohozhisab\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `bi...', 0)
+#1 C:\xampp\htdocs\test\shohozhisab\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `bi...')
+#2 C:\xampp\htdocs\test\shohozhisab\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `bi...')
+#3 C:\xampp\htdocs\test\shohozhisab\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bi...', Array, false)
+#4 C:\xampp\htdocs\test\shohozhisab\app\Controllers\Home.php(66): CodeIgniter\Database\BaseBuilder->insert(Object(CodeIgniter\Database\MySQLi\Builder))
+#5 C:\xampp\htdocs\test\shohozhisab\system\CodeIgniter.php(904): App\Controllers\Home->action()
+#6 C:\xampp\htdocs\test\shohozhisab\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\test\shohozhisab\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\test\shohozhisab\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-11-10 04:38:17 --> Call to a member function setFlashdata() on null
+in APPPATH\Controllers\Home.php on line 68.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->action()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-11-10 04:39:35 --> mysqli_sql_exception: Unknown column 'escapeChar' in 'field list' in C:\xampp\htdocs\test\shohozhisab\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\test\shohozhisab\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `bi...', 0)
+#1 C:\xampp\htdocs\test\shohozhisab\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `bi...')
+#2 C:\xampp\htdocs\test\shohozhisab\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `bi...')
+#3 C:\xampp\htdocs\test\shohozhisab\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bi...', Array, false)
+#4 C:\xampp\htdocs\test\shohozhisab\app\Controllers\Home.php(66): CodeIgniter\Database\BaseBuilder->insert(Object(CodeIgniter\Database\MySQLi\Builder))
+#5 C:\xampp\htdocs\test\shohozhisab\system\CodeIgniter.php(904): App\Controllers\Home->action()
+#6 C:\xampp\htdocs\test\shohozhisab\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\test\shohozhisab\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\test\shohozhisab\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-11-10 04:39:35 --> Call to a member function setFlashdata() on null
+in APPPATH\Controllers\Home.php on line 68.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->action()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-11-10 04:39:37 --> mysqli_sql_exception: Unknown column 'escapeChar' in 'field list' in C:\xampp\htdocs\test\shohozhisab\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\test\shohozhisab\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `bi...', 0)
+#1 C:\xampp\htdocs\test\shohozhisab\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `bi...')
+#2 C:\xampp\htdocs\test\shohozhisab\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `bi...')
+#3 C:\xampp\htdocs\test\shohozhisab\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bi...', Array, false)
+#4 C:\xampp\htdocs\test\shohozhisab\app\Controllers\Home.php(66): CodeIgniter\Database\BaseBuilder->insert(Object(CodeIgniter\Database\MySQLi\Builder))
+#5 C:\xampp\htdocs\test\shohozhisab\system\CodeIgniter.php(904): App\Controllers\Home->action()
+#6 C:\xampp\htdocs\test\shohozhisab\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\test\shohozhisab\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\test\shohozhisab\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-11-10 04:39:37 --> Call to a member function setFlashdata() on null
+in APPPATH\Controllers\Home.php on line 68.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->action()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-11-10 04:40:53 --> mysqli_sql_exception: Unknown column 'escapeChar' in 'field list' in C:\xampp\htdocs\test\shohozhisab\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\test\shohozhisab\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `bi...', 0)
+#1 C:\xampp\htdocs\test\shohozhisab\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `bi...')
+#2 C:\xampp\htdocs\test\shohozhisab\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `bi...')
+#3 C:\xampp\htdocs\test\shohozhisab\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bi...', Array, false)
+#4 C:\xampp\htdocs\test\shohozhisab\app\Controllers\Home.php(66): CodeIgniter\Database\BaseBuilder->insert(Object(CodeIgniter\Database\MySQLi\Builder))
+#5 C:\xampp\htdocs\test\shohozhisab\system\CodeIgniter.php(904): App\Controllers\Home->action()
+#6 C:\xampp\htdocs\test\shohozhisab\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\test\shohozhisab\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\test\shohozhisab\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-11-10 04:40:53 --> Call to a member function setFlashdata() on null
+in APPPATH\Controllers\Home.php on line 68.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->action()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-11-10 04:40:57 --> mysqli_sql_exception: Unknown column 'escapeChar' in 'field list' in C:\xampp\htdocs\test\shohozhisab\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\test\shohozhisab\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `bi...', 0)
+#1 C:\xampp\htdocs\test\shohozhisab\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `bi...')
+#2 C:\xampp\htdocs\test\shohozhisab\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `bi...')
+#3 C:\xampp\htdocs\test\shohozhisab\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bi...', Array, false)
+#4 C:\xampp\htdocs\test\shohozhisab\app\Controllers\Home.php(66): CodeIgniter\Database\BaseBuilder->insert(Object(CodeIgniter\Database\MySQLi\Builder))
+#5 C:\xampp\htdocs\test\shohozhisab\system\CodeIgniter.php(904): App\Controllers\Home->action()
+#6 C:\xampp\htdocs\test\shohozhisab\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\test\shohozhisab\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\test\shohozhisab\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-11-10 04:40:57 --> Call to a member function setFlashdata() on null
+in APPPATH\Controllers\Home.php on line 68.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->action()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-11-10 04:43:51 --> mysqli_sql_exception: Unknown column 'escapeChar' in 'field list' in C:\xampp\htdocs\test\shohozhisab\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\test\shohozhisab\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `bi...', 0)
+#1 C:\xampp\htdocs\test\shohozhisab\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `bi...')
+#2 C:\xampp\htdocs\test\shohozhisab\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `bi...')
+#3 C:\xampp\htdocs\test\shohozhisab\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bi...', Array, false)
+#4 C:\xampp\htdocs\test\shohozhisab\app\Controllers\Home.php(66): CodeIgniter\Database\BaseBuilder->insert(Object(CodeIgniter\Database\MySQLi\Builder))
+#5 C:\xampp\htdocs\test\shohozhisab\system\CodeIgniter.php(904): App\Controllers\Home->action()
+#6 C:\xampp\htdocs\test\shohozhisab\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\test\shohozhisab\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\test\shohozhisab\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-11-10 04:43:51 --> Call to a member function setFlashdata() on null
+in APPPATH\Controllers\Home.php on line 68.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->action()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-11-10 04:43:58 --> mysqli_sql_exception: Unknown column 'escapeChar' in 'field list' in C:\xampp\htdocs\test\shohozhisab\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\test\shohozhisab\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `bi...', 0)
+#1 C:\xampp\htdocs\test\shohozhisab\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `bi...')
+#2 C:\xampp\htdocs\test\shohozhisab\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `bi...')
+#3 C:\xampp\htdocs\test\shohozhisab\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bi...', Array, false)
+#4 C:\xampp\htdocs\test\shohozhisab\app\Controllers\Home.php(66): CodeIgniter\Database\BaseBuilder->insert(Object(CodeIgniter\Database\MySQLi\Builder))
+#5 C:\xampp\htdocs\test\shohozhisab\system\CodeIgniter.php(904): App\Controllers\Home->action()
+#6 C:\xampp\htdocs\test\shohozhisab\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\test\shohozhisab\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\test\shohozhisab\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-11-10 04:43:58 --> Call to a member function setFlashdata() on null
+in APPPATH\Controllers\Home.php on line 68.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->action()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-11-10 04:45:01 --> mysqli_sql_exception: Unknown column 'escapeChar' in 'field list' in C:\xampp\htdocs\test\shohozhisab\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\test\shohozhisab\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `bi...', 0)
+#1 C:\xampp\htdocs\test\shohozhisab\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `bi...')
+#2 C:\xampp\htdocs\test\shohozhisab\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `bi...')
+#3 C:\xampp\htdocs\test\shohozhisab\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bi...', Array, false)
+#4 C:\xampp\htdocs\test\shohozhisab\app\Controllers\Home.php(66): CodeIgniter\Database\BaseBuilder->insert(Object(CodeIgniter\Database\MySQLi\Builder))
+#5 C:\xampp\htdocs\test\shohozhisab\system\CodeIgniter.php(904): App\Controllers\Home->action()
+#6 C:\xampp\htdocs\test\shohozhisab\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\test\shohozhisab\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\test\shohozhisab\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-11-10 04:45:01 --> Call to a member function setFlashdata() on null
+in APPPATH\Controllers\Home.php on line 68.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->action()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-11-10 04:45:30 --> mysqli_sql_exception: Unknown column 'escapeChar' in 'field list' in C:\xampp\htdocs\test\shohozhisab\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\test\shohozhisab\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `bi...', 0)
+#1 C:\xampp\htdocs\test\shohozhisab\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `bi...')
+#2 C:\xampp\htdocs\test\shohozhisab\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `bi...')
+#3 C:\xampp\htdocs\test\shohozhisab\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bi...', Array, false)
+#4 C:\xampp\htdocs\test\shohozhisab\app\Controllers\Home.php(66): CodeIgniter\Database\BaseBuilder->insert(Object(CodeIgniter\Database\MySQLi\Builder))
+#5 C:\xampp\htdocs\test\shohozhisab\system\CodeIgniter.php(904): App\Controllers\Home->action()
+#6 C:\xampp\htdocs\test\shohozhisab\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\test\shohozhisab\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\test\shohozhisab\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-11-10 04:45:30 --> Call to a member function setFlashdata() on null
+in APPPATH\Controllers\Home.php on line 68.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->action()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-11-10 04:46:14 --> mysqli_sql_exception: Unknown column 'escapeChar' in 'field list' in C:\xampp\htdocs\test\shohozhisab\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\test\shohozhisab\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `bi...', 0)
+#1 C:\xampp\htdocs\test\shohozhisab\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `bi...')
+#2 C:\xampp\htdocs\test\shohozhisab\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `bi...')
+#3 C:\xampp\htdocs\test\shohozhisab\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bi...', Array, false)
+#4 C:\xampp\htdocs\test\shohozhisab\app\Controllers\Home.php(66): CodeIgniter\Database\BaseBuilder->insert(Object(CodeIgniter\Database\MySQLi\Builder))
+#5 C:\xampp\htdocs\test\shohozhisab\system\CodeIgniter.php(904): App\Controllers\Home->action()
+#6 C:\xampp\htdocs\test\shohozhisab\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\test\shohozhisab\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\test\shohozhisab\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-11-10 04:46:14 --> Call to a member function setFlashdata() on null
+in APPPATH\Controllers\Home.php on line 68.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->action()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-11-10 04:46:17 --> mysqli_sql_exception: Unknown column 'escapeChar' in 'field list' in C:\xampp\htdocs\test\shohozhisab\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\test\shohozhisab\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `bi...', 0)
+#1 C:\xampp\htdocs\test\shohozhisab\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `bi...')
+#2 C:\xampp\htdocs\test\shohozhisab\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `bi...')
+#3 C:\xampp\htdocs\test\shohozhisab\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bi...', Array, false)
+#4 C:\xampp\htdocs\test\shohozhisab\app\Controllers\Home.php(66): CodeIgniter\Database\BaseBuilder->insert(Object(CodeIgniter\Database\MySQLi\Builder))
+#5 C:\xampp\htdocs\test\shohozhisab\system\CodeIgniter.php(904): App\Controllers\Home->action()
+#6 C:\xampp\htdocs\test\shohozhisab\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\test\shohozhisab\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\test\shohozhisab\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-11-10 04:46:17 --> Call to a member function setFlashdata() on null
+in APPPATH\Controllers\Home.php on line 68.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->action()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-11-10 04:46:39 --> mysqli_sql_exception: Unknown column 'escapeChar' in 'field list' in C:\xampp\htdocs\test\shohozhisab\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\test\shohozhisab\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `bi...', 0)
+#1 C:\xampp\htdocs\test\shohozhisab\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `bi...')
+#2 C:\xampp\htdocs\test\shohozhisab\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `bi...')
+#3 C:\xampp\htdocs\test\shohozhisab\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bi...', Array, false)
+#4 C:\xampp\htdocs\test\shohozhisab\app\Controllers\Home.php(66): CodeIgniter\Database\BaseBuilder->insert(Object(CodeIgniter\Database\MySQLi\Builder))
+#5 C:\xampp\htdocs\test\shohozhisab\system\CodeIgniter.php(904): App\Controllers\Home->action()
+#6 C:\xampp\htdocs\test\shohozhisab\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\test\shohozhisab\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\test\shohozhisab\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-11-10 04:46:39 --> Call to a member function setFlashdata() on null
+in APPPATH\Controllers\Home.php on line 68.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->action()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-11-10 04:47:56 --> mysqli_sql_exception: Unknown column 'escapeChar' in 'field list' in C:\xampp\htdocs\test\shohozhisab\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\test\shohozhisab\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `bi...', 0)
+#1 C:\xampp\htdocs\test\shohozhisab\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `bi...')
+#2 C:\xampp\htdocs\test\shohozhisab\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `bi...')
+#3 C:\xampp\htdocs\test\shohozhisab\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bi...', Array, false)
+#4 C:\xampp\htdocs\test\shohozhisab\app\Controllers\Home.php(66): CodeIgniter\Database\BaseBuilder->insert(Object(CodeIgniter\Database\MySQLi\Builder))
+#5 C:\xampp\htdocs\test\shohozhisab\system\CodeIgniter.php(904): App\Controllers\Home->action()
+#6 C:\xampp\htdocs\test\shohozhisab\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\test\shohozhisab\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\test\shohozhisab\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-11-10 04:47:56 --> Call to a member function setFlashdata() on null
+in APPPATH\Controllers\Home.php on line 68.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->action()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-10 04:49:39 --> Call to a member function setFlashdata() on null
+in APPPATH\Controllers\Home.php on line 68.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->action()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-10 06:23:21 --> Object of class CodeIgniter\Database\MySQLi\Builder could not be converted to string
+in APPPATH\Views\web\get_started.php on line 53.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('web/get_started', [], true)
+ 4 APPPATH\Controllers\Home.php(41): view('web/get_started', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->get_started('2')
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-10 06:23:57 --> Object of class CodeIgniter\Database\MySQLi\Builder could not be converted to string
+in APPPATH\Views\web\get_started.php on line 53.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('web/get_started', [], true)
+ 4 APPPATH\Controllers\Home.php(41): view('web/get_started', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->get_started('2')
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
