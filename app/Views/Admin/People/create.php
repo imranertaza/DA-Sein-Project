@@ -53,6 +53,7 @@
                                     <div class="form-group">
                                         <label for="photo">Image *</label>
                                         <input type="file" class="form-control" name="photo"  />
+                                        <span>size:364x243</span>
                                     </div>
 
                                     <div class="form-group">

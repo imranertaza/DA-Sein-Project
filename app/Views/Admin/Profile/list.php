@@ -32,6 +32,7 @@
                                     <div class="form-group">
                                         <label for="photo">Image update *</label>
                                         <input type="file" class="form-control" name="photo"/>
+                                        <span>size:1500x840</span>
                                     </div>
                                     <div class="form-group">
                                         <input type="hidden" name="id" id="id" value="<?php echo $slider->id; ?>"

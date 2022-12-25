@@ -125,6 +125,7 @@
                                     <div class="form-group">
                                         <label for="news_title">Image *</label>
                                         <div id="multi_image_picker" class="row"></div>
+                                        <span>size:1500x840</span>
                                     </div>
 
                                     <div class="form-group">

@@ -52,6 +52,7 @@
                                         <label for="news_title">Image </label>
                                         <input type="file" class="form-control" name="image" id="image"
                                                placeholder="image" />
+                                        <span>size:1500x840</span>
                                     </div>
 
                                     <div class="form-group">

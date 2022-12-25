@@ -158,6 +158,7 @@
                                                    value="<?php echo $val->work_gallary_id; ?>">
                                             <input type="hidden" name="work_id" value="<?php echo $val->work_id; ?>">
                                             <input type="file" name="image" >
+
                                         </div>
                                         <div class="form-group">
                                             <div class="custom-control ">
@@ -179,6 +180,7 @@
                                     <div class="form-group">
                                         <label for="news_title">Add New Image</label>
                                         <div id="multi_image_picker" class="row"></div>
+                                        <span>size:1500x840</span>
                                     </div>
                                     <div class="form-group">
                                         <input type="hidden" class="form-control" name="work_id" id="work_id"
