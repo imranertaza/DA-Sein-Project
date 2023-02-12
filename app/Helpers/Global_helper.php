@@ -115,7 +115,12 @@ function image_view($url,$slug,$image,$no_image,$class=''){
         if(!file_exists($dir)){
             $result = '<img data-sizes="auto" src="'.$no_img.'" class="'.$class.'" loading="lazy">';
         }else{
-            $result = '<img data-sizes="auto" src="' . $img . '" class="' . $class . '" loading="lazy">';
+            $imgPath = $dir.'/'.$image;
+            if (file_exists($imgPath)) {
+                $result = '<img data-sizes="auto" src="' . $img . '" class="' . $class . '" loading="lazy">';
+            }else{
+                $result = '<img data-sizes="auto" src="'.$no_img.'" class="'.$class.'" loading="lazy">';
+            }
         }
     }else{
         $result = '<img data-sizes="auto" src="'.$no_img.'" class="'.$class.'" loading="lazy">';
@@ -150,7 +155,12 @@ function slider_image($url,$image,$no_image,$class=''){
         if(!file_exists($dir)){
             $result = '<img data-sizes="auto" src="'.$no_img.'" class="'.$class.'">';
         }else{
-            $result = '<img data-sizes="auto" src="' . $img . '" class="' . $class . '">';
+            $imgPath = $dir.'/'.$image;
+            if (file_exists($imgPath)) {
+                $result = '<img data-sizes="auto" src="' . $img . '" class="' . $class . '">';
+            }else{
+                $result = '<img data-sizes="auto" src="'.$no_img.'" class="'.$class.'">';
+            }
         }
     }else{
         $result = '<img data-sizes="auto" src="'.$no_img.'" class="'.$class.'">';

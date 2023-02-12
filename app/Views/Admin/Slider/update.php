@@ -62,7 +62,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <img src="<?php echo base_url()?>/uploads/slider_img/<?php echo $slider->image;?>" width="200">
+                                        <?php echo slider_image('uploads/slider_img',$slider->image,'no_img.jpg','img-200'); ?>
                                     </div>
                                 </div>
                             </div>

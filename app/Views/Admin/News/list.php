@@ -52,7 +52,7 @@
                                     <td><?php echo $val->news_type;?></td>
                                     <td><?php echo $val->news_description;?></td>
                                     <td>
-                                        <img src="<?php echo base_url()?>/uploads/news_img/<?php echo $val->slug;?>/thum_<?php echo $val->image;?>" width="200">
+                                        <?php echo image_view('uploads/news_img',$val->slug,'thum_'.$val->image,'thum_no_img.jpg','img-200'); ?>
                                     </td>
                                     <td width="120">
                                         <a href="<?php echo base_url('Admin/News/update/'.$val->news_id)?>" class="btn btn-warning btn-xs">Update</a>

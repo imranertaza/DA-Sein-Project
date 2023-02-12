@@ -49,7 +49,7 @@
                                     <td><?php echo $i++?></td>
                                     <td><?php echo $val->name;?></td>
                                     <td>
-                                        <img src="<?php echo base_url()?>/uploads/slider_img/<?php echo $val->image;?>" width="200">
+                                        <?php echo slider_image('uploads/slider_img',$val->image,'no_img.jpg','img-200'); ?>
                                     </td>
                                     <td><?php echo statusView($val->status);?></td>
                                     <td width="120">
