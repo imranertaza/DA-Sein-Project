@@ -140,7 +140,10 @@ class Client extends BaseController
             //old image unlink
             $old_img = get_data_by_id('logo','client','client_id',$client_id);
             if (!empty($old_img)){
-                unlink($target_dir.''.$old_img);
+                $imgPath = $target_dir.''.$old_img;
+                if (file_exists($imgPath)) {
+                    unlink($target_dir . '' . $old_img);
+                }
             }
 
             //new image uplode
@@ -176,7 +179,10 @@ class Client extends BaseController
             //old image unlink
             $old_img = get_data_by_id('value','global_settings','id',$id);
             if (!empty($old_img)){
-                unlink($target_dir.''.$old_img);
+                $imgPath = $target_dir.''.$old_img;
+                if (file_exists($imgPath)) {
+                    unlink($target_dir . '' . $old_img);
+                }
             }
 
             //new image uplode
@@ -206,7 +212,10 @@ class Client extends BaseController
         $target_dir = FCPATH . '/uploads/client/';
         $old_img = get_data_by_id('logo','client','client_id',$id);
         if (!empty($old_img)){
-            unlink($target_dir.''.$old_img);
+            $imgPath = $target_dir.''.$old_img;
+            if (file_exists($imgPath)) {
+                unlink($target_dir . '' . $old_img);
+            }
         }
 
         $table = DB()->table('client');

@@ -151,9 +151,13 @@ class News extends BaseController
             $old_slug = get_data_by_id('slug','news','news_id',$data['news_id']);
             $old_img = get_data_by_id('image','news','news_id',$data['news_id']);
             $target_dir2 = FCPATH . '/uploads/news_img/'.$old_slug.'/';
+
             if (!empty($old_img)){
-                unlink($target_dir.''.$old_img);
-                unlink($target_dir.''.'thum_'.$old_img);
+                $imgPath = $target_dir.''.$old_img;
+                if (file_exists($imgPath)) {
+                    unlink($target_dir . '' . $old_img);
+                    unlink($target_dir . '' . 'thum_' . $old_img);
+                }
             }
 
             //new image uplode
@@ -199,8 +203,11 @@ class News extends BaseController
         $old_img = get_data_by_id('image','news','news_id',$id);
         $target_dir = FCPATH . '/uploads/news_img/'.$old_slug.'/';
         if (!empty($old_img)){
-            unlink($target_dir.''.$old_img);
-            unlink($target_dir.''.'thum_'.$old_img);
+            $imgPath = $target_dir.''.$old_img;
+            if (file_exists($imgPath)) {
+                unlink($target_dir . '' . $old_img);
+                unlink($target_dir . '' . 'thum_' . $old_img);
+            }
         }
 
         $table = DB()->table('news');

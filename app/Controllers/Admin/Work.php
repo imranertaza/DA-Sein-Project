@@ -246,8 +246,11 @@ class Work extends BaseController
             //old image unlink
             $old_img = get_data_by_id('image','work_gallary','work_gallary_id',$data['work_gallary_id']);
             if (!empty($old_img)){
-                unlink($target_dir.''.$old_img);
-                unlink($target_dir.''.'thum_'.$old_img);
+                $imgPath = $target_dir.''.$old_img;
+                if (file_exists($imgPath)) {
+                    unlink($target_dir . '' . $old_img);
+                    unlink($target_dir . '' . 'thum_' . $old_img);
+                }
             }
 
 
@@ -317,8 +320,11 @@ class Work extends BaseController
 
         $target_dir = FCPATH . '/uploads/work_img/'.$slug.'/';
         if (!empty($old_img)){
-            unlink($target_dir.''.$old_img);
-            unlink($target_dir.''.'thum_'.$old_img);
+            $imgPath = $target_dir.''.$old_img;
+            if (file_exists($imgPath)) {
+                unlink($target_dir . '' . $old_img);
+                unlink($target_dir . '' . 'thum_' . $old_img);
+            }
         }
 
         $table = DB()->table('work_gallary');

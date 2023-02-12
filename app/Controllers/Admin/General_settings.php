@@ -94,11 +94,9 @@ class General_settings extends BaseController
 
     public function update_action(){
         $data['id'] = $this->request->getPost('id');
-        $data['title'] = $this->request->getPost('title');
         $data['value'] = $this->request->getPost('value');
 
         $this->validation->setRules([
-            'title' => ['label' => 'title', 'rules' => 'required'],
             'value' => ['label' => 'value', 'rules' => 'required'],
         ]);
 

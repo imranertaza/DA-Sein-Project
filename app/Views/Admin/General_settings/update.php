@@ -26,12 +26,12 @@
                             <div class="col-lg-6">
                                 <form action="<?php echo $action; ?>" method="post">
 
+<!--                                    <div class="form-group">-->
+<!--                                        <label for="label">Label</label>-->
+<!--                                        <input type="text" class="form-control" name="title" id="title" placeholder="label" value="--><?php //echo $settings->title; ?><!--" required>-->
+<!--                                    </div>-->
                                     <div class="form-group">
-                                        <label for="label">Label</label>
-                                        <input type="text" class="form-control" name="title" id="title" placeholder="label" value="<?php echo $settings->title; ?>" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="value">Value</label>
+                                        <label for="value" class="text-capitalize" ><?php echo str_replace('_',' ',$settings->title); ?></label>
                                         <input type="text" class="form-control" name="value" id="value" placeholder="value" value="<?php echo $settings->value; ?>" required>
                                     </div>
 

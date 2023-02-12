@@ -1,0 +1,16 @@
+CRITICAL - 2023-02-11 23:33:59 --> unlink(C:\xampp\htdocs\test\da_sein\public_html\/uploads/slider_img/news_1668510244_5679e2f1fc0dc0feab28.jpg): No such file or directory
+in APPPATH\Controllers\Admin\Slider.php on line 130.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(C:\\xampp\\htdocs\\test\\da_sein\\public_html\\/uploads/slider_img/news_1668510244_5679e2f1fc0dc0feab28.jpg): No such file or directory', 'APPPATH\\Controllers\\Admin\\Slider.php', 130, [...])
+ 2 APPPATH\Controllers\Admin\Slider.php(130): unlink('FCPATH\\/uploads/slider_img/news_1668510244_5679e2f1fc0dc0feab28.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Admin\Slider->update_action()
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Slider))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-11 23:37:22 --> unlink(C:\xampp\htdocs\test\da_sein\public_html\/uploads/slider_img/news_1676180208_98e17793ed235ad0fdfa.jpg): No such file or directory
+in APPPATH\Controllers\Admin\Slider.php on line 130.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(C:\\xampp\\htdocs\\test\\da_sein\\public_html\\/uploads/slider_img/news_1676180208_98e17793ed235ad0fdfa.jpg): No such file or directory', 'APPPATH\\Controllers\\Admin\\Slider.php', 130, [...])
+ 2 APPPATH\Controllers\Admin\Slider.php(130): unlink('FCPATH\\/uploads/slider_img/news_1676180208_98e17793ed235ad0fdfa.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Admin\Slider->update_action()
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Slider))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

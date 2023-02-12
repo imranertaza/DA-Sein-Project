@@ -43,16 +43,16 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <?php $i=1; foreach ($settings as $val){ ?>
+                            <?php $i=1; foreach ($settings as $val){ if ($val->title == 'image_unlock_code'){  ?>
                                 <tr>
                                     <td><?php echo $i++?></td>
-                                    <td><?php echo $val->title;?></td>
+                                    <td><?php echo str_replace('_',' ',$val->title);?></td>
                                     <td><?php echo $val->value;?></td>
                                     <td>
                                         <a href="<?php echo base_url('Admin/General_settings/update/'.$val->id)?>" class="btn btn-warning btn-xs">Update</a>
                                     </td>
                                 </tr>
-                            <?php }?>
+                            <?php } }?>
 
                             </tfoot>
                         </table>
