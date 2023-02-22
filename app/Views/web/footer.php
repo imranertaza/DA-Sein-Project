@@ -12,17 +12,38 @@
     <?php $message = isset($_SESSION['message']) ? $_SESSION['message'] : 0; if($message){ ?> <?php print $message; ?> <?php } ?>
 </div>
 
+
+
 <footer class="site-footer">
     <div class="footer-content">
         <div class="sqs-layout sqs-grid-12 columns-12" data-layout-label="Footer" data-type="block-field"
              data-updated-on="1645519027616" id="footer">
             <div class="row sqs-row">
+
                 <div class="col sqs-col-12 span-12">
+                    <?php if (isset($codeSub)){ ?>
+                    <div class="sqs-block socialaccountlinks-v2-block sqs-block-socialaccountlinks-v2"
+                         data-block-type="54" id="block-yui_3_17_2_80_1508967373173_6221">
+                        <div class="sqs-block-content">
+                    <?php if (!isset(newSession()->image_protect)) { ?>
+                        <div class="form-protect-image" style="border-top: 1px sloid !important; ">
+                            <form class="example" action="<?php echo base_url() ?>/Home/image_protect" method="post">
+                                <div class="form-group protect-image">
+                                <input type="text" class="form-code-inp" name="code" placeholder="Code" required>
+                                <button class="next" type="submit"><img src="<?php echo base_url() ?>/uploads/arr.png" alt=""></button>
+
+                            </form>
+                        </div>
+                    <?php } ?>
+                        </div>
+                    </div>
+                    <?php } ?>
                     <div class="sqs-block html-block sqs-block-html" data-block-type="2"
                          id="block-04f6434df3a15da7abb7">
                         <div class="">
                             <p style="text-align:center;white-space:pre-wrap;" class="">Copyright © 2022&nbsp; | &nbsp;All rights reserved &nbsp;|&nbsp; Developed By <a href="https://dnationsoft.com/"
-                                                                              target="another_tab">DNationSoft</a></p>
+                                                                              target="another_tab">DNationSoft</a> | <a
+                                        href="<?php echo base_url()?>/Home/privacy_policy">Privacy Policy</a></p>
                         </div>
                     </div>
                     <div class="sqs-block socialaccountlinks-v2-block sqs-block-socialaccountlinks-v2"
@@ -175,6 +196,29 @@
         });
 
     });
+
+    function hide_modal(){
+        $('.home-modal').hide();
+    }
+
+    // $("#sub_form").on('submit', (function(e) {
+    //     e.preventDefault();
+    //     $.ajax({
+    //         url: $(this).attr('action'),
+    //         type: "POST",
+    //         data: new FormData(this),
+    //         contentType: false,
+    //         cache: false,
+    //         processData: false,
+    //         success: function(response) {
+    //             // $("#form").trigger("reset"); // to reset form input fields
+    //             $('.home-modal').hide();
+    //         },
+    //         error: function(e) {
+    //             console.log(e);
+    //         }
+    //     });
+    // }));
 
 </script>
 <!-- End: Video Banners for blog posts -->

@@ -1,5 +1,6 @@
 <main class="site-content" role="main" data-content-field="main-content">
     <article class="blog-post" data-item-id="6377c1725a25321759a98c39">
+
         <div class="post-content has-banner">
             <div class="post-banner">
                 <div class="img-wrap cover p-ratio">
@@ -8,7 +9,7 @@
             </div>
             <div class="post-header">
                 <div class="post-meta">
-                    <div class="publish-date"><?php echo globalDateFormat($news->createdDtm);?></div>
+                    <div class="publish-date"><?php echo globalDateFormat($news->publish_date);?></div>
                     <div class="share-buttons">
                         <span class="share-title">Share:</span>
                         <a href="https://www.facebook.com/sharer.php?u=<?php echo base_url()?>/Home/news_view/<?php echo $news->news_id;?>" target="_blank"> Facebook </a>
@@ -34,16 +35,23 @@
                     </div>
                 </div>
             </div>
-<!--            <div class="pagination">-->
-<!--                <a class="next" href="news/2022/11/14/hamaren-activity-park-update.html" title="Next">-->
-<!--                    <svg viewBox="0 0 17 10" xmlns="http://www.w3.org/2000/svg">-->
-<!--                        <g fill="none" fill-rule="evenodd">-->
-<!--                            <path class="fill" d="M16.06865 4.86426L11.5784 9.5272V.2013"/>-->
-<!--                            <path class="stroke" d="M1 5h12.51922" stroke-width="2" stroke-linecap="square"/>-->
-<!--                        </g>-->
-<!--                    </svg>-->
-<!--                </a>-->
-<!--            </div>-->
+
+
+            <div class="pagination">
+                <?php
+                    $arraynews = [];
+                    foreach ($newsArray as $val){ array_push($arraynews,$val->news_id); }
+                    $current_array_val = array_search($news->news_id, $arraynews);
+                    $next_array_val = $arraynews[$current_array_val+1];
+                    $prev_array_val = $arraynews[$current_array_val-1];
+                ?>
+                <?php if (!empty($prev_array_val)){ ?>
+                <a class="prev" href="<?php echo base_url()?>/Home/news_view/<?php echo $prev_array_val;?>" title="Previous"><svg viewBox="0 0 17 10" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path class="fill" d="M.93135 5.13574L5.4216.4728V9.7987"></path><path class="stroke" d="M16 5H3.48078" stroke-width="2" stroke-linecap="square"></path></g></svg></a>
+                <?php } ?>
+                <?php if (!empty($next_array_val)){ ?>
+                <a class="next" href="<?php echo base_url()?>/Home/news_view/<?php echo $next_array_val;?>" title="Next"><svg viewBox="0 0 17 10" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path class="fill" d="M16.06865 4.86426L11.5784 9.5272V.2013"></path><path class="stroke" d="M1 5h12.51922" stroke-width="2" stroke-linecap="square"></path></g></svg></a>
+                <?php } ?>
+            </div>
         </div>
     </article>
 </main>

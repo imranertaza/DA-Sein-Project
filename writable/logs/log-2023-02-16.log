@@ -1,0 +1,108 @@
+ERROR - 2023-02-16 05:38:49 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it.
+ in C:\xampp\htdocs\test\da_sein\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp\htdocs\test\da_sein\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'pixel', 3306, '', 0)
+#1 C:\xampp\htdocs\test\da_sein\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\test\da_sein\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\test\da_sein\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\test\da_sein\app\Helpers\Global_helper.php(72): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\test\da_sein\app\Views\Admin\header.php(68): user('1')
+#6 C:\xampp\htdocs\test\da_sein\system\View\View.php(213): include('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\test\da_sein\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#8 C:\xampp\htdocs\test\da_sein\system\Common.php(1137): CodeIgniter\View\View->render('Admin/header', Array, true)
+#9 C:\xampp\htdocs\test\da_sein\app\Controllers\Admin\Dashboard.php(33): view('Admin/header')
+#10 C:\xampp\htdocs\test\da_sein\system\CodeIgniter.php(904): App\Controllers\Admin\Dashboard->index()
+#11 C:\xampp\htdocs\test\da_sein\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dashboard))
+#12 C:\xampp\htdocs\test\da_sein\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\test\da_sein\public_html\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it.
+ in C:\xampp\htdocs\test\da_sein\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp\htdocs\test\da_sein\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\test\da_sein\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\test\da_sein\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\test\da_sein\app\Helpers\Global_helper.php(72): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\test\da_sein\app\Views\Admin\header.php(68): user('1')
+#5 C:\xampp\htdocs\test\da_sein\system\View\View.php(213): include('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\test\da_sein\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#7 C:\xampp\htdocs\test\da_sein\system\Common.php(1137): CodeIgniter\View\View->render('Admin/header', Array, true)
+#8 C:\xampp\htdocs\test\da_sein\app\Controllers\Admin\Dashboard.php(33): view('Admin/header')
+#9 C:\xampp\htdocs\test\da_sein\system\CodeIgniter.php(904): App\Controllers\Admin\Dashboard->index()
+#10 C:\xampp\htdocs\test\da_sein\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dashboard))
+#11 C:\xampp\htdocs\test\da_sein\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\test\da_sein\public_html\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-02-16 05:38:49 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `admin`
+WHERE `user_id` = :user_id:', [...], false)
+ 3 APPPATH\Helpers\Global_helper.php(72): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Views\Admin\header.php(68): user('1')
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\header.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Admin/header', [], true)
+ 8 APPPATH\Controllers\Admin\Dashboard.php(33): view('Admin/header')
+ 9 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Admin\Dashboard->index()
+10 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dashboard))
+11 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-02-16 06:32:51 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it.
+ in C:\xampp\htdocs\test\da_sein\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp\htdocs\test\da_sein\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'pixel', 3306, '', 0)
+#1 C:\xampp\htdocs\test\da_sein\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\test\da_sein\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\test\da_sein\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\test\da_sein\app\Helpers\Global_helper.php(72): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\test\da_sein\app\Views\Admin\header.php(68): user('1')
+#6 C:\xampp\htdocs\test\da_sein\system\View\View.php(213): include('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\test\da_sein\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#8 C:\xampp\htdocs\test\da_sein\system\Common.php(1137): CodeIgniter\View\View->render('Admin/header', Array, true)
+#9 C:\xampp\htdocs\test\da_sein\app\Controllers\Admin\Dashboard.php(33): view('Admin/header')
+#10 C:\xampp\htdocs\test\da_sein\system\CodeIgniter.php(904): App\Controllers\Admin\Dashboard->index()
+#11 C:\xampp\htdocs\test\da_sein\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dashboard))
+#12 C:\xampp\htdocs\test\da_sein\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\test\da_sein\public_html\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it.
+ in C:\xampp\htdocs\test\da_sein\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp\htdocs\test\da_sein\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\test\da_sein\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\test\da_sein\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\test\da_sein\app\Helpers\Global_helper.php(72): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\test\da_sein\app\Views\Admin\header.php(68): user('1')
+#5 C:\xampp\htdocs\test\da_sein\system\View\View.php(213): include('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\test\da_sein\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#7 C:\xampp\htdocs\test\da_sein\system\Common.php(1137): CodeIgniter\View\View->render('Admin/header', Array, true)
+#8 C:\xampp\htdocs\test\da_sein\app\Controllers\Admin\Dashboard.php(33): view('Admin/header')
+#9 C:\xampp\htdocs\test\da_sein\system\CodeIgniter.php(904): App\Controllers\Admin\Dashboard->index()
+#10 C:\xampp\htdocs\test\da_sein\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dashboard))
+#11 C:\xampp\htdocs\test\da_sein\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\test\da_sein\public_html\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-02-16 06:32:51 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `admin`
+WHERE `user_id` = :user_id:', [...], false)
+ 3 APPPATH\Helpers\Global_helper.php(72): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Views\Admin\header.php(68): user('1')
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\header.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Admin/header', [], true)
+ 8 APPPATH\Controllers\Admin\Dashboard.php(33): view('Admin/header')
+ 9 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Admin\Dashboard->index()
+10 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dashboard))
+11 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

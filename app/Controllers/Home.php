@@ -17,7 +17,7 @@ class Home extends BaseController
     {
         $table = DB()->table('slider');
         $data['slider'] = $table->get()->getResult();
-
+//        unset($_SESSION['subscribe']);
         echo view('web/header');
         echo view('web/index', $data);
         echo view('web/footer');
@@ -42,6 +42,9 @@ class Home extends BaseController
         $table = DB()->table('news');
         $data['news'] = $table->where('news_id', $id)->get()->getRow();
 
+        $table2 = DB()->table('news');
+        $data['newsArray'] = $table2->get()->getResult();
+
         echo view('web/header_2', $data);
         echo view('web/news_detail', $data);
         echo view('web/footer');
@@ -50,6 +53,7 @@ class Home extends BaseController
     public function work()
     {
         $data['slug'] = 'work';
+        $data['codeSub'] = 'work';
 
         $table = DB()->table('works');
         $data['works'] = $table->get()->getResult();
@@ -61,7 +65,7 @@ class Home extends BaseController
 
         echo view('web/header_2', $data);
         echo view('web/work', $data);
-        echo view('web/footer');
+        echo view('web/footer',$data);
     }
 
     public function work_view($id)
@@ -78,6 +82,7 @@ class Home extends BaseController
         echo view('web/work_detail', $data);
         echo view('web/footer');
     }
+    
     public function image_protect(){
         $code = $this->request->getPost('code');
         $otp = title_by_global_settings_value('image_unlock_code');
@@ -184,6 +189,9 @@ class Home extends BaseController
 
         $podcastsTable = DB()->table('podcasts');
         $data['podcasts'] = $podcastsTable->orderBy('podcasts_id', 'DESC')->limit('3')->get()->getResult();
+
+        $current_vacanciesTable = DB()->table('current_vacancies');
+        $data['current_vacancies'] = $current_vacanciesTable->get()->getResult();
 
         echo view('web/header_2', $data);
         echo view('web/office', $data);
@@ -414,5 +422,36 @@ class Home extends BaseController
         }
     }
 
+    public function privacy_policy(){
+        $data['slug'] = 'working_at';
 
+        echo view('web/header_2', $data);
+        echo view('web/privacy_policy', $data);
+        echo view('web/footer');
+    }
+
+    public function subscribe_action(){
+        $data['email'] = $this->request->getPost('email');
+        $data['createdBy'] = '1';
+
+        $this->validation->setRules([
+            'email' => ['label' => 'email', 'rules' => 'required'],
+        ]);
+
+        if ($this->validation->run($data) == FALSE) {
+            $this->session->setFlashdata('message', '<div class="alert alert-danger alert-dismissible" role="alert">' . $this->validation->listErrors() . '</div>');
+            return redirect()->to('/');
+        }else{
+
+            $table = DB()->table('subscribe');
+            $table->insert($data);
+
+            $ses = array('subscribe' => '1');
+            $this->session->set($ses);
+
+//            $this->session->setFlashdata('message', '<div class="alert alert-success alert-dismissible" role="alert">Submit successfully</div>');
+            return redirect()->to('/');
+
+        }
+    }
 }

@@ -69,6 +69,11 @@
                                     </div>
 
                                     <div class="form-group">
+                                        <label for="news_title">Publish Date *</label>
+                                        <input type="date" class="form-control" name="publish_date" id="publish_date" value="<?php echo date('Y-m-d');?>" >
+                                    </div>
+
+                                    <div class="form-group">
                                         <label for="news_title">Meta Title</label>
                                         <input type="text" class="form-control" name="meta_title" id="meta_title"
                                                placeholder="Meta Title" />

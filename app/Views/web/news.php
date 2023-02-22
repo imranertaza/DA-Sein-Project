@@ -9,7 +9,7 @@
             </a>
             <div class="item-meta-wrapper">
                 <div class="item-meta">
-                    <date class="publish-date"><?php echo globalDateFormat($val->createdDtm);?></date>
+                    <date class="publish-date"><?php echo globalDateFormat($val->publish_date);?></date>
                     <div class="item-title"><?php echo $val->news_title;?></div>
                 </div>
             </div>

@@ -62,6 +62,7 @@ class News extends BaseController
         $data['meta_keyword'] = $this->request->getPost('meta_keyword');
         $data['meta_description'] = $this->request->getPost('meta_description');
         $data['years'] = $this->request->getPost('years');
+        $data['publish_date'] = $this->request->getPost('publish_date');
 
 
         $slug = strtolower(trim(preg_replace('/[^A-Za-z0-9-]+/', '-', $data['news_title'])));
@@ -94,6 +95,7 @@ class News extends BaseController
             'news_type' => ['label' => 'news_type', 'rules' => 'required'],
             'news_description' => ['label' => 'news_description', 'rules' => 'required'],
             'years' => ['label' => 'Years', 'rules' => 'required'],
+            'publish_date' => ['label' => 'Publish Date', 'rules' => 'required'],
         ]);
 
         if ($this->validation->run($data) == FALSE) {
@@ -138,6 +140,7 @@ class News extends BaseController
         $data['meta_description'] = $this->request->getPost('meta_description');
         $data['status'] = $this->request->getPost('status');
         $data['years'] = $this->request->getPost('years');
+        $data['publish_date'] = $this->request->getPost('publish_date');
         $slug = strtolower(trim(preg_replace('/[^A-Za-z0-9-]+/', '-', $data['news_title'])));
         $data['slug'] = $slug;
 
@@ -181,6 +184,7 @@ class News extends BaseController
             'news_type' => ['label' => 'news_type', 'rules' => 'required'],
             'news_description' => ['label' => 'news_description', 'rules' => 'required'],
             'years' => ['label' => 'Years', 'rules' => 'required'],
+            'publish_date' => ['label' => 'Publish Date', 'rules' => 'required'],
         ]);
 
 

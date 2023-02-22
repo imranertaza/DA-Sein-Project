@@ -131,6 +131,12 @@
                     </li>
 
                     <li>
+                        <a href="<?php echo base_url('Admin/Current_vacancies') ?>">
+                            <i class=" fa fa-tasks"></i> <span>Current Vacancies</span>
+                        </a>
+                    </li>
+
+                    <li>
                         <a href="<?php echo base_url('Admin/Block') ?>">
                             <i class=" fa fa-tasks"></i> <span>Block</span>
                         </a>
@@ -154,6 +160,11 @@
             <li>
                 <a href="<?php echo base_url('Admin/Settings') ?>">
                     <i class="fa fa-gear"></i> <span>Profile</span>
+                </a>
+            </li>
+            <li>
+                <a href="<?php echo base_url('Admin/Subscribe') ?>">
+                    <i class="fa fa-gear"></i> <span>Subscribe</span>
                 </a>
             </li>
 

@@ -482,7 +482,7 @@
 <header class="site-header">
     <nav class="site-nav">
         <div class="logo-container">
-            <a class="logo" href="<?php echo base_url()?>" data-content-field="site-title">
+            <a class="logo" href="<?php echo base_url()?>" data-content-field="site-title" style="margin-top:4px; ">
                 <img src="<?php echo base_url()?>/uploads/logo.png" alt="" width="100" class="img-fluid">
             </a>
         </div>
