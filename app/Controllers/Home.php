@@ -28,7 +28,7 @@ class Home extends BaseController
         $data['slug'] = 'news';
 
         $table = DB()->table('news');
-        $data['news'] = $table->get()->getResult();
+        $data['news'] = $table->orderBy('years','DESC')->get()->getResult();
 
         echo view('web/header_2', $data);
         echo view('web/news', $data);
@@ -120,7 +120,7 @@ class Home extends BaseController
                         $view .= '<div class="gallery-item iso-item hentry tag-masterplan tag-residential author-lucrezia-biasutti post-type-image article-index-1 featured" id="fadeIn_'.$i++.'">
                         <a href="' . base_url() . '/Home/work_view/' . $val->work_id . '"
                            title="' . $val->project_name . '">
-                            <div class="iso-image img-wrap cover">' . image_view('uploads/work_img', $val->slug, 'thum_' . $img, 'thum_no_img.jpg', 'lazyload')
+                            <div class="iso-image img-wrap cover">' . image_view('uploads/work_img', $val->work_id, 'thum_' . $img, 'thum_no_img.jpg', 'lazyload')
                             . '</div>
                             <div class="item-meta-wrapper">
                                 <div class="item-meta">
@@ -144,7 +144,7 @@ class Home extends BaseController
                 $view .= '<div class="gallery-item iso-item hentry tag-masterplan tag-residential author-lucrezia-biasutti post-type-image article-index-1 featured">
                         <a href="' . base_url() . '/Home/work_view/' . $val->work_id . '"
                            title="' . $val->project_name . '">
-                            <div class="iso-image img-wrap cover">' . image_view('uploads/work_img', $val->slug, 'thum_' . $img, 'thum_no_img.jpg', 'lazyload')
+                            <div class="iso-image img-wrap cover">' . image_view('uploads/work_img', $val->work_id, 'thum_' . $img, 'thum_no_img.jpg', 'lazyload')
                     . '</div>
                             <div class="item-meta-wrapper">
                                 <div class="item-meta">

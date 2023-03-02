@@ -92,7 +92,7 @@ class Work extends BaseController
             $datawork['work_id'] = DB()->insertID();
 
             if ($this->request->getFileMultiple('multiImage')) {
-                $target_dir = FCPATH . '/uploads/work_img/'.$slug.'/';
+                $target_dir = FCPATH . '/uploads/work_img/'.$datawork['work_id'].'/';
                 if(!file_exists($target_dir)){
                     mkdir($target_dir,0777);
                 }
@@ -193,7 +193,7 @@ class Work extends BaseController
         $slug = get_data_by_id('slug','works','work_id',$data['work_id']);
 
         if ($this->request->getFileMultiple('multiImage')) {
-            $target_dir = FCPATH . '/uploads/work_img/'.$slug.'/';
+            $target_dir = FCPATH . '/uploads/work_img/'.$data['work_id'].'/';
             if(!file_exists($target_dir)){
                 mkdir($target_dir,0777);
             }
@@ -238,7 +238,7 @@ class Work extends BaseController
         }
 
         if (!empty($_FILES['image']['name'])) {
-            $target_dir = FCPATH . '/uploads/work_img/'.$slug.'/';
+            $target_dir = FCPATH . '/uploads/work_img/'.$work_id.'/';
             if(!file_exists($target_dir)){
                 mkdir($target_dir,0777);
             }
@@ -300,7 +300,7 @@ class Work extends BaseController
     {
         helper('filesystem');
         $slug = get_data_by_id('slug','works','work_id',$id);
-        $target_dir = FCPATH . '/uploads/work_img/'.$slug;
+        $target_dir = FCPATH . '/uploads/work_img/'.$id;
         delete_files($target_dir );
 
         $table = DB()->table('work_gallary');
@@ -318,7 +318,7 @@ class Work extends BaseController
         $slug = get_data_by_id('slug','works','work_id',$work_id);
         $old_img = get_data_by_id('image','work_gallary','work_gallary_id',$id);
 
-        $target_dir = FCPATH . '/uploads/work_img/'.$slug.'/';
+        $target_dir = FCPATH . '/uploads/work_img/'.$work_id.'/';
         if (!empty($old_img)){
             $imgPath = $target_dir.''.$old_img;
             if (file_exists($imgPath)) {

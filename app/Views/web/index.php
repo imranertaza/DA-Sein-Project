@@ -19,12 +19,12 @@
 <?php if (!isset(newSession()->subscribe)){ ?>
 <div class="home-modal">
     <a href="#" onclick="hide_modal()"><img src="<?php echo base_url() ?>/uploads/crose.png" alt="" class="sub-img"></a>
-    <h1>Join our<br> mailing list.</h1>
+    <h1 style="font-size: 20px;">Join our<br> mailing list.</h1>
     <p class="sub-text">Be the first to know about projects, exhibitions, publications, job openings, and other updates
         from our studio in Dhaka</p>
     <form class="sub_form" action="<?php echo base_url('Home/subscribe_action')?>" method="post">
-        <input type="email" class="email-input" name="email" placeholder="Email Address" required>
-        <button type="submit" class="btn-sub">Subscribe</button>
+        <input style="font-size: 12px;" type="email" class="email-input" name="email" placeholder="Email Address" required>
+        <button type="submit" class="btn-sub" style="font-size: 15px;">Subscribe</button>
     </form>
     <center><p class="sub-text" style="margin-top: 10px;" >We respect your privacy</p></center>
 </div>

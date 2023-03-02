@@ -156,10 +156,10 @@ form.example::after {
     position: absolute;
     background-color: white;
     /*min-height: 400px;*/
-    right: 40px;
-    bottom: 40px;
-    width: 300px;
-    padding: 40px;
+    right: 70px;
+    bottom: 70px;
+    width: 170px;
+    padding: 30px;
 }
 .email-input{
     width: 92%;
@@ -175,6 +175,7 @@ form.example::after {
 }
 .sub-text{
     color:#b0afaf;
+    font-size:12px;
 }
 .sub-img{
     float: right;

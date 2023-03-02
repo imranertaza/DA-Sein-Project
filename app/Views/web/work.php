@@ -8,7 +8,7 @@
                        title="<?php echo $val->project_name; ?>">
                         <div class="iso-image img-wrap cover">
                             <?php $img = get_data_by_id('image', 'work_gallary', 'work_id', $val->work_id); ?>
-                            <?php echo image_view('uploads/work_img', $val->slug, 'thum_' . $img, 'thum_no_img.jpg', 'lazyload'); ?>
+                            <?php echo image_view('uploads/work_img', $val->work_id, 'thum_' . $img, 'thum_no_img.jpg', 'lazyload'); ?>
                         </div>
                         <div class="item-meta-wrapper">
                             <div class="item-meta">
@@ -23,7 +23,7 @@
 
     <div class="map-area" style="display: none;" id="map_area">
         <iframe src="https://www.google.com/maps/d/embed?mid=1iFV_ylvs1_Ay7z9LJRii7-7IcAtKgS8&ehbc=2E312F"
-                width="100%" height="450" style="border:0; " allowfullscreen="" loading="lazy"
+                width="100%" height="650" style="border:0; " allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 

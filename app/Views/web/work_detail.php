@@ -5,7 +5,7 @@
 
             <div class="slide swiper-slide">
                 <div class="img-wrap cover p-ratio">
-                    <?php echo image_view('uploads/work_img', $works->slug, $val->image, 'no_img.jpg', 'swiper-lazy'); ?>
+                    <?php echo image_view('uploads/work_img', $works->work_id, $val->image, 'no_img.jpg', 'swiper-lazy'); ?>
                     <div class="slide-meta"></div>
                 </div>
             </div>
@@ -108,7 +108,7 @@
                 <?php foreach ($allImg as $val) { ?>
                 <div class="project-item">
                     <div class="project-image img-wrap cover p-ratio">
-                        <?php echo image_view('uploads/work_img', $works->slug, 'thum_'.$val->image, 'thum_no_img.jpg', 'lazyload'); ?>
+                        <?php echo image_view('uploads/work_img', $works->work_id, 'thum_'.$val->image, 'thum_no_img.jpg', 'lazyload'); ?>
                     </div>
                 </div>
                 <?php } ?>

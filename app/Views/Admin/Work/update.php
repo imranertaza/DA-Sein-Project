@@ -151,7 +151,7 @@
                                     <form action="<?php echo base_url() ?>/Admin/Work/update_image" method="post"
                                           enctype="multipart/form-data">
                                         <div class="form-group">
-                                            <?php echo image_view('uploads/work_img', $work->slug, 'thum_' . $val->image, 'thum_no_img.jpg', $class = 'short_img') ?>
+                                            <?php echo image_view('uploads/work_img', $work->work_id, 'thum_' . $val->image, 'thum_no_img.jpg', $class = 'short_img') ?>
                                         </div>
                                         <div class="form-group">
                                             <input type="hidden" name="work_gallary_id"

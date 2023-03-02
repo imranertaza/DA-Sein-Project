@@ -39,7 +39,8 @@
                                 <th>No</th>
                                 <th>Name</th>
                                 <th>Description</th>
-                                <th>status</th>
+                                <th>Image</th>
+                                <th>Status</th>
                                 <th>Action</th>
                             </tr>
                             </thead>
@@ -48,7 +49,11 @@
                                 <tr>
                                     <td><?php echo $i++?></td>
                                     <td><?php echo $val->project_name;?></td>
-                                    <td><?php echo $val->news_description;?></td>
+                                    <td width="300"><?php echo $val->news_description;?></td>
+                                    <td><?php
+                                        $img = get_data_by_id('image','work_gallary','work_id',$val->work_id);
+                                        echo image_view('uploads/work_img', $val->work_id, 'thum_' . $img, 'thum_no_img.jpg', $class = 'short_img');
+                                        ?></td>
                                     <td><?php echo statusView($val->status);?></td>
                                     <td width="180">
                                         <a href="<?php echo base_url('Admin/Work/view/'.$val->work_id)?>" class="btn btn-primary btn-xs">View</a>
