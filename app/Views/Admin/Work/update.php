@@ -78,6 +78,13 @@
                                             <?php echo globalStatus($work->status); ?>
                                         </select>
                                     </div>
+                                    <div class="form-group">
+                                        <label for="news_title">Project Status</label>
+                                        <input type="text" class="form-control" name="project_status"
+                                               id="project_status"
+                                               placeholder="Project Status"
+                                               value="<?php echo $work->project_status; ?>"/>
+                                    </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -103,18 +110,18 @@
                                         <textarea class="form-control" rows="2" name="meta_description"
                                                   id="meta_description"><?php echo $work->meta_description; ?></textarea>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="news_title">Project Status</label>
-                                        <input type="text" class="form-control" name="project_status"
-                                               id="project_status"
-                                               placeholder="Project Status"
-                                               value="<?php echo $work->project_status; ?>"/>
-                                    </div>
+
 
                                     <div class="form-group">
                                         <label for="news_title">Size</label>
                                         <input type="text" class="form-control" name="size" id="size"
                                                placeholder="Size" value="<?php echo $work->size; ?>"/>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="news_title">GFA	Size</label>
+                                        <input type="text" class="form-control" name="gfa_size" id="gfa_size"
+                                               placeholder="GFA	Size" value="<?php echo $work->gfa_size; ?>" />
                                     </div>
 
                                     <div class="form-group">
@@ -126,6 +133,11 @@
                                         <label for="location">Design Team</label>
                                         <input type="text" class="form-control" name="design_team" id="design_team"
                                                placeholder="Design Team" value="<?php echo $work->design_team; ?>"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="location">Design Copyright</label>
+                                        <input type="text" class="form-control" name="copyright" id="copyright"
+                                               placeholder="Copyright" value="<?php echo $work->copyright; ?>" />
                                     </div>
                                     <div class="form-group">
                                         <input type="hidden" class="form-control" name="work_id" id="work_id"

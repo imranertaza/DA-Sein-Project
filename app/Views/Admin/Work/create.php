@@ -74,6 +74,12 @@
                                         <input type="text" class="form-control" name="client" id="client"
                                                placeholder="Client" />
                                     </div>
+                                    <div class="form-group">
+                                        <label for="news_title">Project Status</label>
+                                        <input type="text" class="form-control" name="project_status"
+                                               id="project_status"
+                                               placeholder="Project Status"/>
+                                    </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -93,17 +99,18 @@
                                         <textarea class="form-control" rows="2" name="meta_description"
                                                   id="meta_description"></textarea>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="news_title">Project Status</label>
-                                        <input type="text" class="form-control" name="project_status"
-                                               id="project_status"
-                                               placeholder="Project Status"/>
-                                    </div>
+
 
                                     <div class="form-group">
                                         <label for="news_title">Size</label>
                                         <input type="text" class="form-control" name="size" id="size"
                                                placeholder="Size"/>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="news_title">GFA	Size</label>
+                                        <input type="text" class="form-control" name="gfa_size" id="gfa_size"
+                                               placeholder="GFA	Size"/>
                                     </div>
 
                                     <div class="form-group">
@@ -117,7 +124,11 @@
                                                placeholder="Design Team" />
                                     </div>
 
-
+                                    <div class="form-group">
+                                        <label for="location">Design Copyright</label>
+                                        <input type="text" class="form-control" name="copyright" id="copyright"
+                                               placeholder="Copyright" />
+                                    </div>
 
 
                                 </div>

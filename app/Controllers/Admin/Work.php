@@ -25,7 +25,7 @@ class Work extends BaseController
             return redirect()->to(site_url('Admin/login'));
         } else {
             $table = DB()->table('works');
-            $data['works'] = $table->get()->getResult();
+            $data['works'] = $table->orderBy('work_id', 'DESC')->get()->getResult();
 
 
 
@@ -71,6 +71,8 @@ class Work extends BaseController
         $data['meta_keyword'] = $this->request->getPost('meta_keyword');
         $data['meta_description'] = $this->request->getPost('meta_description');
         $data['cat_id'] = $this->request->getPost('cat_id');
+        $data['gfa_size'] = $this->request->getPost('gfa_size');
+        $data['copyright'] = $this->request->getPost('copyright');
 //        $data['img_unlock_code'] = rand(100000,999999);
         $data['createdBy'] = $this->session->userId;
 
@@ -163,6 +165,8 @@ class Work extends BaseController
         $data['meta_description'] = $this->request->getPost('meta_description');
         $data['cat_id'] = $this->request->getPost('cat_id');
         $data['status'] = $this->request->getPost('status');
+        $data['gfa_size'] = $this->request->getPost('gfa_size');
+        $data['copyright'] = $this->request->getPost('copyright');
 
         $slug = strtolower(trim(preg_replace('/[^A-Za-z0-9-]+/', '-', $data['project_name'])));
         $data['slug'] = $slug;

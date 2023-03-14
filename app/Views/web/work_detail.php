@@ -182,6 +182,12 @@
                             <hr>
                             <?php } ?>
 
+                            <?php if (!empty($works->gfa_size)){ ?>
+                                <h3 id="size">GFA Size</h3>
+                                <p><?php echo $works->gfa_size;?></p>
+                                <hr>
+                            <?php } ?>
+
                             <?php if (!empty($works->client)){ ?>
                             <h3 id="client">Client</h3>
                             <p><?php echo $works->client;?></p>
@@ -198,6 +204,12 @@
                             <h3 id="collaborators">Collaborators</h3>
                             <p><?php echo $works->collaborators;?></p>
                             <hr>
+                            <?php } ?>
+
+                            <?php if (!empty($works->copyright)){ ?>
+                                <h3 id="collaborators">Copyright</h3>
+                                <p><?php echo $works->copyright;?></p>
+                                <hr>
                             <?php } ?>
                         </div>
                     </div>

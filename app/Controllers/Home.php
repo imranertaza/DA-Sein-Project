@@ -56,7 +56,7 @@ class Home extends BaseController
         $data['codeSub'] = 'work';
 
         $table = DB()->table('works');
-        $data['works'] = $table->get()->getResult();
+        $data['works'] = $table->orderBy('work_id', 'DESC')->get()->getResult();
 
         $categoryTable = DB()->table('category');
         $data['category'] = $categoryTable->where('status', '1')->get()->getResult();

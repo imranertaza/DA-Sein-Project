@@ -351,7 +351,7 @@
                                         <div class="sharedFormField">
                                             <div class="title">Salary Expectations </div>
                                             <div id="description-61c074668f7e723683cdfd2bfbf44ea6" class="description">
-                                                EUR or DKK / Month
+                                                TK / Month
                                             </div>
                                             <div class="cellContainer">
                                                 <input type="text" class="input-class" name="salary_expectations" style="padding: 6px;" >
