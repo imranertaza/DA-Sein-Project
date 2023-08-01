@@ -68,25 +68,6 @@ class News extends BaseController
         $slug = strtolower(trim(preg_replace('/[^A-Za-z0-9-]+/', '-', $data['news_title'])));
         $data['slug'] = $slug;
 
-        if (!empty($_FILES['image']['name'])){
-            $target_dir = FCPATH . '/uploads/news_img/'.$slug.'/';
-            if(!file_exists($target_dir)){
-                mkdir($target_dir,0777);
-            }
-
-            //new image uplode
-            $pic = $this->request->getFile('image');
-            $namePic = $pic->getRandomName();
-            $pic->move($target_dir,$namePic);
-            $news_img = 'news_'.$pic->getName();
-            $this->crop->withFile($target_dir.''.$namePic)->fit(1500, 840, 'center')->save($target_dir.''.$news_img);
-            $this->crop->withFile($target_dir.''.$namePic)->fit(402, 245, 'center')->save($target_dir.''.'thum_'.$news_img);
-            unlink($target_dir.''.$namePic);
-            $data['image'] = $news_img;
-        }
-
-
-
 
         $data['createdBy'] = $this->session->userId;
 
@@ -104,6 +85,34 @@ class News extends BaseController
         }else{
             $table = DB()->table('news');
             $table->insert($data);
+            $newsID = DB()->insertID();
+
+            if ($this->request->getFileMultiple('multiImage')) {
+                $target_dir = FCPATH . '/uploads/news_img/'.$newsID.'/';
+                if(!file_exists($target_dir)){
+                    mkdir($target_dir,0777);
+                }
+
+                foreach ($this->request->getFileMultiple('multiImage') as $file) {
+                    if (!empty($file->getName())) {
+                        $namePic = $file->getRandomName();
+
+                        $file->move($target_dir, $namePic);
+                        $news_img = 'news_' . $file->getName();
+                        $this->crop->withFile($target_dir . '' . $namePic)->fit(1500, 840, 'center')->save($target_dir . '' . $news_img);
+                        $this->crop->withFile($target_dir . '' . $namePic)->fit(402, 245, 'center')->save($target_dir . '' . 'thum_' . $news_img);
+                        unlink($target_dir . '' . $namePic);
+
+                        $dataNews['news_id'] = $newsID;
+                        $dataNews['image'] = $news_img;
+
+                        $tableNews = DB()->table('news_gallary');
+                        $tableNews->insert($dataNews);
+                    }
+
+                }
+            }
+
             $this->session->setFlashdata('message', '<div class="alert alert-success alert-dismissible" role="alert">Create Record Success <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
             return redirect()->to('/Admin/News/create');
         }
@@ -118,6 +127,9 @@ class News extends BaseController
         }else {
             $table = DB()->table('news');
             $data['news'] = $table->where('news_id',$id)->get()->getRow();
+
+            $tablegal = DB()->table('news_gallary');
+            $data['news_image'] = $tablegal->where('news_id', $id)->get()->getResult();
             $data['action'] = base_url('Admin/News/update_action');
 
             echo view('Admin/header');
@@ -144,39 +156,6 @@ class News extends BaseController
         $slug = strtolower(trim(preg_replace('/[^A-Za-z0-9-]+/', '-', $data['news_title'])));
         $data['slug'] = $slug;
 
-        if (!empty($_FILES['image']['name'])){
-            $target_dir = FCPATH . '/uploads/news_img/'.$slug.'/';
-            if(!file_exists($target_dir)){
-                mkdir($target_dir,0777);
-            }
-
-            //old image unlink
-            $old_slug = get_data_by_id('slug','news','news_id',$data['news_id']);
-            $old_img = get_data_by_id('image','news','news_id',$data['news_id']);
-            $target_dir2 = FCPATH . '/uploads/news_img/'.$old_slug.'/';
-
-            if (!empty($old_img)){
-                $imgPath = $target_dir.''.$old_img;
-                if (file_exists($imgPath)) {
-                    unlink($target_dir . '' . $old_img);
-                    unlink($target_dir . '' . 'thum_' . $old_img);
-                }
-            }
-
-            //new image uplode
-            $pic = $this->request->getFile('image');
-            $namePic = $pic->getRandomName();
-            $pic->move($target_dir,$namePic);
-            $news_img = 'news_'.$pic->getName();
-            $this->crop->withFile($target_dir.''.$namePic)->fit(1500, 840, 'center')->save($target_dir.''.$news_img);
-            $this->crop->withFile($target_dir.''.$namePic)->fit(402, 245, 'center')->save($target_dir.''.'thum_'.$news_img);
-            unlink($target_dir.''.$namePic);
-            $data['image'] = $news_img;
-        }
-
-
-
-
         $data['updatedBy'] = $this->session->userId;
 
         $this->validation->setRules([
@@ -200,12 +179,54 @@ class News extends BaseController
         }
     }
 
-    public function delete($id){
+    public function update_image(){
+        $news_gallary_id = $this->request->getPost('news_gallary_id');
+        $news_id = $this->request->getPost('news_id');
 
-        //old image unlink
-        $old_slug = get_data_by_id('slug','news','news_id',$id);
-        $old_img = get_data_by_id('image','news','news_id',$id);
-        $target_dir = FCPATH . '/uploads/news_img/'.$old_slug.'/';
+
+        if (!empty($_FILES['image']['name'])) {
+            $target_dir = FCPATH . '/uploads/news_img/'.$news_id.'/';
+            if(!file_exists($target_dir)){
+                mkdir($target_dir,0777);
+            }
+
+            //old image unlink
+            $old_img = get_data_by_id('image','news_gallary','news_gallary_id',$news_gallary_id);
+            if (!empty($old_img)){
+                $imgPath = $target_dir.''.$old_img;
+                if (file_exists($imgPath)) {
+                    unlink($target_dir . '' . $old_img);
+                    unlink($target_dir . '' . 'thum_' . $old_img);
+                }
+            }
+
+
+            $file = $this->request->getFile('image');
+            $namePic = $file->getRandomName();
+
+            $file->move($target_dir, $namePic);
+            $news_img = 'news_' . $file->getName();
+            $this->crop->withFile($target_dir . '' . $namePic)->fit(1500, 840, 'center')->save($target_dir . '' . $news_img);
+            $this->crop->withFile($target_dir . '' . $namePic)->fit(402, 245,'center')->save($target_dir . '' . 'thum_' . $news_img);
+            unlink($target_dir . '' . $namePic);
+
+            $tableNewsData['image'] = $news_img;
+
+
+        }
+
+        $tableNews = DB()->table('news_gallary');
+        $tableNews->where('news_gallary_id',$news_gallary_id)->update($tableNewsData);
+
+        $this->session->setFlashdata('message', '<div class="alert alert-success alert-dismissible" role="alert">Update Record Success <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
+        return redirect()->to('/Admin/News/update/'.$news_id);
+    }
+
+    public function delete_image($id){
+        $news_id = get_data_by_id('news_id','news_gallary','news_gallary_id',$id);
+        $old_img = get_data_by_id('image','news_gallary','news_gallary_id',$id);
+
+        $target_dir = FCPATH . '/uploads/news_img/'.$news_id.'/';
         if (!empty($old_img)){
             $imgPath = $target_dir.''.$old_img;
             if (file_exists($imgPath)) {
@@ -213,6 +234,49 @@ class News extends BaseController
                 unlink($target_dir . '' . 'thum_' . $old_img);
             }
         }
+
+        $table = DB()->table('news_gallary');
+        $table->where('news_gallary_id', $id)->delete();
+
+        $this->session->setFlashdata('message', '<div class="alert alert-success alert-dismissible" role="alert">Delete Record Success <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
+        return redirect()->to('/Admin/News/update/'.$news_id);
+    }
+
+    public function add_image(){
+        $data['news_id'] = $this->request->getPost('news_id');
+
+        if ($this->request->getFileMultiple('multiImage')) {
+            $target_dir = FCPATH . '/uploads/news_img/'.$data['news_id'].'/';
+            if(!file_exists($target_dir)){
+                mkdir($target_dir,0777);
+            }
+
+            foreach ($this->request->getFileMultiple('multiImage') as $file) {
+                if (!empty($file->getName())) {
+                    $namePic = $file->getRandomName();
+
+                    $file->move($target_dir, $namePic);
+                    $news_img = 'news_' . $file->getName();
+                    $this->crop->withFile($target_dir . '' . $namePic)->fit(1500, 840, 'center')->save($target_dir . '' . $news_img);
+                    $this->crop->withFile($target_dir . '' . $namePic)->fit(402, 245, 'center')->save($target_dir . '' . 'thum_' . $news_img);
+                    unlink($target_dir . '' . $namePic);
+
+                    $data['image'] = $news_img;
+
+                    $tableNews = DB()->table('news_gallary');
+                    $tableNews->insert($data);
+                }
+
+            }
+
+            $this->session->setFlashdata('message', '<div class="alert alert-success alert-dismissible" role="alert">Add New Image Success <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
+            return redirect()->to('/Admin/News/update/'.$data['news_id']);
+        }
+
+    }
+
+
+    public function delete($id){
 
         $table = DB()->table('news');
         $table->where('news_id',$id)->delete();

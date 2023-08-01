@@ -45,6 +45,9 @@ class Home extends BaseController
         $table2 = DB()->table('news');
         $data['newsArray'] = $table2->get()->getResult();
 
+        $tableGallery = DB()->table('news_gallary');
+        $data['newsGallery'] = $tableGallery->where('news_id', $id)->get()->getResult();
+        $data['project'] = 'project';
         echo view('web/header_2', $data);
         echo view('web/news_detail', $data);
         echo view('web/footer');

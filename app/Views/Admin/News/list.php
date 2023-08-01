@@ -52,7 +52,10 @@
                                     <td><?php echo $val->news_type;?></td>
                                     <td><?php echo $val->news_description;?></td>
                                     <td>
-                                        <?php echo image_view('uploads/news_img',$val->slug,'thum_'.$val->image,'thum_no_img.jpg','img-200'); ?>
+                                        <?php
+                                        $img = get_data_by_id('image','news_gallary','news_id',$val->news_id);
+                                        echo image_view('uploads/news_img',$val->news_id,'thum_'.$img,'thum_no_img.jpg','img-200');
+                                        ?>
                                     </td>
                                     <td width="120">
                                         <a href="<?php echo base_url('Admin/News/update/'.$val->news_id)?>" class="btn btn-warning btn-xs">Update</a>
@@ -61,7 +64,7 @@
                                 </tr>
                             <?php }?>
 
-                            </tfoot>
+                            </tbody>
                         </table>
                     </div>
                     <!-- /.box-body -->

@@ -87,10 +87,13 @@
                                         <label for="news_title">Meta Description</label>
                                         <textarea class="form-control" name="meta_description" id="meta_description"></textarea>
                                     </div>
+
+                                </div>
+                                <div class="col-md-12">
+
                                     <div class="form-group">
                                         <label for="news_title">Image *</label>
-                                        <input type="file" class="form-control" name="image" id="image"
-                                               placeholder="image" required/>
+                                        <div id="multi_image_picker" class="row"></div>
                                         <span>size:1500x840</span>
                                     </div>
                                     <div class="form-group">

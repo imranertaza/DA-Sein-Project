@@ -94,12 +94,7 @@
                                         </select>
                                     </div>
 
-                                    <div class="form-group">
-                                        <label for="news_title">Image *</label>
-                                        <input type="file" class="form-control" name="image" id="image"
-                                               placeholder="image" >
-                                        <span>size:1500x840</span>
-                                    </div>
+
                                     <div class="form-group">
                                         <input type="hidden" class="form-control" name="news_id" id="news_id"
                                                placeholder="news_id" value="<?php echo $news->news_id;?>">
@@ -112,6 +107,57 @@
                     <!-- /.box-body -->
                 </div>
                 <!-- /.box -->
+
+                <div class="box">
+                    <div class="box-header">
+                        <h3 class="box-title">Image Update</h3>
+                    </div>
+                    <div class="box-body">
+                        <div class="row">
+                            <?php $i=1; $j=1; foreach ($news_image as $val) { ?>
+                                <div class="col-md-4" style="margin-top: 10px;">
+                                    <form action="<?php echo base_url() ?>/Admin/News/update_image" method="post"
+                                          enctype="multipart/form-data">
+                                        <div class="form-group">
+                                            <?php echo image_view('uploads/news_img', $val->news_id, 'thum_' . $val->image, 'thum_no_img.jpg', $class = 'short_img') ?>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="hidden" name="news_gallary_id"
+                                                   value="<?php echo $val->news_gallary_id; ?>">
+                                            <input type="hidden" name="news_id" value="<?php echo $val->news_id; ?>">
+                                            <input type="file" name="image" >
+
+                                        </div>
+                                        <div class="form-group">
+
+                                            <button type="submit" class="btn btn-primary">Update</button>
+                                            <a href="<?php echo base_url() ?>/Admin/News/delete_image/<?php echo $val->news_gallary_id; ?>"
+                                               onclick="return confirm('Are you sure you want to Delete?')"
+                                               class="btn btn-danger">Delete</a>
+                                        </div>
+                                    </form>
+                                </div>
+                            <?php } ?>
+
+                            <div class="col-md-12" style="margin-top: 10px;">
+                                <form action="<?php echo base_url() ?>/Admin/News/add_image" method="post"
+                                      enctype="multipart/form-data">
+                                    <div class="form-group">
+                                        <label for="news_title">Add New Image</label>
+                                        <div id="multi_image_picker" class="row"></div>
+                                        <span>size:1500x840</span>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="hidden" class="form-control" name="news_id" id="news_id"
+                                               value="<?php echo $news->news_id; ?>"/>
+                                        <button class="btn btn-primary">Add New Image</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
             </div>
 
         </div>
