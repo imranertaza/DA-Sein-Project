@@ -35,7 +35,7 @@ class Database extends Config
         'hostname' => 'localhost',
         'username' => 'root',
         'password' => '',
-        'database' => 'pixel',
+        'database' => 'da-sein',
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',
         'pConnect' => false,
