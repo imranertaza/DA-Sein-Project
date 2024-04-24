@@ -59,7 +59,7 @@
                                 </tr>
                             <?php }?>
 
-                            </tfoot>
+                            </tbody>
                         </table>
                     </div>
                     <!-- /.box-body -->

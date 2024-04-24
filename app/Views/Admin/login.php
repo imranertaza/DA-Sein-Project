@@ -64,7 +64,7 @@
 
 
 
-        <a href="#">I forgot my password</a><br>
+        <a href="<?php echo base_url('Admin/Login/forgot_password')?>">I forgot my password</a><br>
 <!--        <a href="register.html" class="text-center">Register a new membership</a>-->
 
     </div>

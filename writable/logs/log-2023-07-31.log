@@ -1,0 +1,66 @@
+ERROR - 2023-07-31 23:19:36 --> mysqli_sql_exception: Unknown column 'escapeChar' in 'field list' in C:\xampp\htdocs\DA-Sein\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\DA-Sein\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `news_ga...', 0)
+#1 C:\xampp\htdocs\DA-Sein\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `news_ga...')
+#2 C:\xampp\htdocs\DA-Sein\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `news_ga...')
+#3 C:\xampp\htdocs\DA-Sein\system\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `news_ga...', Array, false)
+#4 C:\xampp\htdocs\DA-Sein\app\Controllers\Admin\News.php(252): CodeIgniter\Database\BaseBuilder->update(Object(CodeIgniter\Database\MySQLi\Builder))
+#5 C:\xampp\htdocs\DA-Sein\system\CodeIgniter.php(904): App\Controllers\Admin\News->update_image()
+#6 C:\xampp\htdocs\DA-Sein\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\News))
+#7 C:\xampp\htdocs\DA-Sein\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\DA-Sein\public_html\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2023-07-31 23:22:15 --> mysqli_sql_exception: Unknown column 'escapeChar' in 'field list' in C:\xampp\htdocs\DA-Sein\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\DA-Sein\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `news_ga...', 0)
+#1 C:\xampp\htdocs\DA-Sein\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `news_ga...')
+#2 C:\xampp\htdocs\DA-Sein\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `news_ga...')
+#3 C:\xampp\htdocs\DA-Sein\system\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `news_ga...', Array, false)
+#4 C:\xampp\htdocs\DA-Sein\app\Controllers\Admin\News.php(252): CodeIgniter\Database\BaseBuilder->update(Object(CodeIgniter\Database\MySQLi\Builder))
+#5 C:\xampp\htdocs\DA-Sein\system\CodeIgniter.php(904): App\Controllers\Admin\News->update_image()
+#6 C:\xampp\htdocs\DA-Sein\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\News))
+#7 C:\xampp\htdocs\DA-Sein\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\DA-Sein\public_html\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2023-07-31 23:24:03 --> mysqli_sql_exception: Unknown column 'escapeChar' in 'field list' in C:\xampp\htdocs\DA-Sein\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\DA-Sein\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `news_ga...', 0)
+#1 C:\xampp\htdocs\DA-Sein\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `news_ga...')
+#2 C:\xampp\htdocs\DA-Sein\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `news_ga...')
+#3 C:\xampp\htdocs\DA-Sein\system\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `news_ga...', Array, false)
+#4 C:\xampp\htdocs\DA-Sein\app\Controllers\Admin\News.php(252): CodeIgniter\Database\BaseBuilder->update(Object(CodeIgniter\Database\MySQLi\Builder))
+#5 C:\xampp\htdocs\DA-Sein\system\CodeIgniter.php(904): App\Controllers\Admin\News->update_image()
+#6 C:\xampp\htdocs\DA-Sein\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\News))
+#7 C:\xampp\htdocs\DA-Sein\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\DA-Sein\public_html\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2023-07-31 23:27:53 --> mysqli_sql_exception: Unknown column 'escapeChar' in 'field list' in C:\xampp\htdocs\DA-Sein\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\DA-Sein\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `news_ga...', 0)
+#1 C:\xampp\htdocs\DA-Sein\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `news_ga...')
+#2 C:\xampp\htdocs\DA-Sein\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `news_ga...')
+#3 C:\xampp\htdocs\DA-Sein\system\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `news_ga...', Array, false)
+#4 C:\xampp\htdocs\DA-Sein\app\Controllers\Admin\News.php(252): CodeIgniter\Database\BaseBuilder->update(Object(CodeIgniter\Database\MySQLi\Builder))
+#5 C:\xampp\htdocs\DA-Sein\system\CodeIgniter.php(904): App\Controllers\Admin\News->update_image()
+#6 C:\xampp\htdocs\DA-Sein\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\News))
+#7 C:\xampp\htdocs\DA-Sein\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\DA-Sein\public_html\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2023-07-31 23:28:15 --> mysqli_sql_exception: Unknown column 'escapeChar' in 'field list' in C:\xampp\htdocs\DA-Sein\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\DA-Sein\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `news_ga...', 0)
+#1 C:\xampp\htdocs\DA-Sein\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `news_ga...')
+#2 C:\xampp\htdocs\DA-Sein\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `news_ga...')
+#3 C:\xampp\htdocs\DA-Sein\system\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `news_ga...', Array, false)
+#4 C:\xampp\htdocs\DA-Sein\app\Controllers\Admin\News.php(252): CodeIgniter\Database\BaseBuilder->update(Object(CodeIgniter\Database\MySQLi\Builder))
+#5 C:\xampp\htdocs\DA-Sein\system\CodeIgniter.php(904): App\Controllers\Admin\News->update_image()
+#6 C:\xampp\htdocs\DA-Sein\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\News))
+#7 C:\xampp\htdocs\DA-Sein\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\DA-Sein\public_html\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-07-31 23:37:39 --> Too few arguments to function App\Controllers\Admin\Work::update(), 0 passed in C:\xampp\htdocs\DA-Sein\system\CodeIgniter.php on line 904 and exactly 1 expected
+in APPPATH\Controllers\Admin\Work.php on line 127.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Admin\Work->update()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Work))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
