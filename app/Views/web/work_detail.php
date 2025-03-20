@@ -1,15 +1,35 @@
 <main class="site-content" role="main" data-content-field="main-content">
     <section class="project-slideshow swiper-container" data-collection-id="627d19337eed7503b7c340f3">
-        <div class="swiper-wrapper">
-            <?php $allImg = work_all_image($works->work_id); foreach ($allImg as $val) { ?>
+        <div class="swiper-wrapper" style="max-height: unset !important;">
 
-            <div class="slide swiper-slide">
-                <div class="img-wrap cover p-ratio">
-                    <?php echo image_view('uploads/work_img', $works->work_id, $val->image, 'no_img.jpg', 'swiper-lazy'); ?>
-                    <div class="slide-meta"></div>
+            <?php
+            $allImg = work_all_image($works->work_id);
+            foreach ($allImg as $val) {
+                if (!empty($val->image)){
+            ?>
+                <div class="slide swiper-slide">
+                    <div class="img-wrap cover p-ratio">
+                        <?php echo image_view('uploads/work_img', $works->work_id, $val->image, 'no_img.jpg', 'swiper-lazy'); ?>
+                        <div class="slide-meta"></div>
+                    </div>
                 </div>
-            </div>
-            <?php } ?>
+                <?php }else{
+                    $videoUrl = base_url('uploads/work_img/'.$works->work_id.'/'.$val->video);
+                    ?>
+                <div class="slide swiper-slide">
+                    <div class="img-wrap cover p-ratio">
+                        <video width="695" height="391" controls>
+                            <source src="<?php echo $videoUrl ?>" type="video/avi/mp4">
+                            <source src="<?php echo $videoUrl ?>" type="video/ogg">
+                        </video>
+                        <div class="slide-meta"></div>
+                    </div>
+                </div>
+
+            <?php } } ?>
+
+
+
 
             <div class="slick-arrow prev hide">
                 <svg viewBox="0 0 50 71" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">

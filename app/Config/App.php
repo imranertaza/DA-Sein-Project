@@ -24,7 +24,7 @@ class App extends BaseConfig
      *
      * @var string
      */
-    public $baseURL = 'http://localhost/DA-Sein/public_html/';
+    public $baseURL = 'http://da-sein.local/';
 
     /**
      * --------------------------------------------------------------------------

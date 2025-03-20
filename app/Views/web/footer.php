@@ -41,8 +41,7 @@
                     <div class="sqs-block html-block sqs-block-html" data-block-type="2"
                          id="block-04f6434df3a15da7abb7">
                         <div class="">
-                            <p style="text-align:center;white-space:pre-wrap;" class="">Copyright © 2022&nbsp; | &nbsp;All rights reserved &nbsp;|&nbsp; Developed By <a href="https://dnationsoft.com/"
-                                                                              target="another_tab">DNationSoft</a> | <a
+                            <p style="text-align:center;white-space:pre-wrap;" class="">Copyright © 2022&nbsp; | &nbsp;All rights reserved &nbsp;|&nbsp; <a
                                         href="<?php echo base_url()?>/Home/privacy_policy">Privacy Policy</a></p>
                         </div>
                     </div>

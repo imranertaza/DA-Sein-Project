@@ -24,6 +24,9 @@
                             <div class="col-lg-12" style="margin-top: 20px;">
                                 <?php if (session()->getFlashdata('message') !== NULL) : echo session()->getFlashdata('message'); endif; ?>
                             </div>
+                            <div class="col-lg-12" style="margin-top: 20px;">
+                                <?php if (session()->getFlashdata('message2') !== NULL) : echo session()->getFlashdata('message2'); endif; ?>
+                            </div>
                         </div>
                     </div>
                     <!-- /.box-header -->
@@ -140,11 +143,19 @@
                                     </div>
 
                                     <div class="form-group">
+                                        <label for="videos">Select videos:</label>
+                                        <input type="file" name="videos[]" id="videos" multiple accept="video/mp4,video/MOV,video/WEBM" >
+                                        <br><span>Accept Video: MP4,MOV,WEBM</span>
+                                    </div>
+
+                                    <div class="form-group">
                                         <button class="btn btn-primary">Create</button>
                                     </div>
                                 </div>
                             </div>
                         </form>
+
+
                     </div>
                     <!-- /.box-body -->
                 </div>
