@@ -118,8 +118,38 @@ class Work extends BaseController
                 }
             }
 
+            if ($this->request->getFileMultiple('videos')) {
+                $target_dir = FCPATH . '/uploads/work_img/'.$datawork['work_id'].'/';
+                if(!file_exists($target_dir)){
+                    mkdir($target_dir,0777);
+                }
+                $error = 0;
+                foreach ($this->request->getFileMultiple('videos') as $file) {
+                    $maxFileSize = 10 * 1024 * 1024;
+                    if ( $maxFileSize > $file->getSize() ){
+                        if (!empty($file->getName())) {
+                            $namePic = $file->getRandomName();
+                            $file->move($target_dir, $namePic);
+
+                            $dataVideo['work_id'] = $datawork['work_id'];
+                            $dataVideo['video'] = $namePic;
+
+                            $tablework = DB()->table('work_gallary');
+                            $tablework->insert($dataVideo);
+                        }
+                    }else{
+                        $error = 1;
+                    }
+
+                }
+            }
+            if ($error == 1) {
+                $this->session->setFlashdata('message2', '<div class="alert alert-danger alert-dismissible" role="alert">Video size must be less than 10MB <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
+            }
+
             $this->session->setFlashdata('message', '<div class="alert alert-success alert-dismissible" role="alert">Create Record Success <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
             return redirect()->to('/Admin/Work/create');
+
         }
     }
 
@@ -319,7 +349,6 @@ class Work extends BaseController
 
     public function delete_image($id){
         $work_id = get_data_by_id('work_id','work_gallary','work_gallary_id',$id);
-        $slug = get_data_by_id('slug','works','work_id',$work_id);
         $old_img = get_data_by_id('image','work_gallary','work_gallary_id',$id);
 
         $target_dir = FCPATH . '/uploads/work_img/'.$work_id.'/';
@@ -336,6 +365,66 @@ class Work extends BaseController
 
         $this->session->setFlashdata('message', '<div class="alert alert-success alert-dismissible" role="alert">Delete Record Success <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
         return redirect()->to('/Admin/Work/update/'.$work_id);
+    }
+
+    public function delete_video($id){
+        $work_id = get_data_by_id('work_id','work_gallary','work_gallary_id',$id);
+        $old_img = get_data_by_id('video','work_gallary','work_gallary_id',$id);
+
+        $target_dir = FCPATH . '/uploads/work_img/'.$work_id.'/';
+        if (!empty($old_img)){
+            $imgPath = $target_dir.''.$old_img;
+            if (file_exists($imgPath)) {
+                unlink($target_dir . '' . $old_img);
+            }
+        }
+
+        $table = DB()->table('work_gallary');
+        $table->where('work_gallary_id', $id)->delete();
+
+        $this->session->setFlashdata('message', '<div class="alert alert-success alert-dismissible" role="alert">Delete Record Success <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
+        return redirect()->to('/Admin/Work/update/'.$work_id);
+    }
+
+    public function add_video(){
+        $data['work_id'] = $this->request->getPost('work_id');
+
+        $error = 0;
+        if ($this->request->getFileMultiple('videos')) {
+            $target_dir = FCPATH . '/uploads/work_img/'.$data['work_id'].'/';
+            if(!file_exists($target_dir)){
+                mkdir($target_dir,0777);
+            }
+
+            foreach ($this->request->getFileMultiple('videos') as $file) {
+                $maxFileSize = 10 * 1024 * 1024;
+                if ( $maxFileSize > $file->getSize() ) {
+                    if (!empty($file->getName())) {
+                        $namePic = $file->getRandomName();
+                        $file->move($target_dir, $namePic);
+
+                        $dataVideo['work_id'] = $data['work_id'];
+                        $dataVideo['video'] = $namePic;
+
+                        $tablework = DB()->table('work_gallary');
+                        $tablework->insert($dataVideo);
+                    }
+                }else{
+                    $error = 1;
+                }
+            }
+
+            if ($error == 1) {
+                $this->session->setFlashdata('message2', '<div class="alert alert-danger alert-dismissible" role="alert">Video size must be less than 10MB <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
+            }
+
+            $this->session->setFlashdata('message', '<div class="alert alert-success alert-dismissible" role="alert">Add New Video Success <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
+            return redirect()->to('/Admin/Work/update/' . $data['work_id']);
+
+
+        }
+
+
     }
 
 

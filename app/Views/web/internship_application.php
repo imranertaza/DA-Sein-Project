@@ -14,11 +14,8 @@
                                     <div class="formHeader mx-auto max-width-2 lg-rounded-big md-rounded-big sm-rounded-big white">
                                         <div class="formLogoImageContainer"></div>
                                         <h1 class="formName">Internship Application Form</h1>
-                                        <p class="formDescription break-word">Please note: If you have completed a
-                                            Master's degree from a University within the EU, you are not eligible for an
-                                            internship. This is regardless of any post-graduate scholarship (Erasmus+,
-                                            Leonardo,
-                                            etc.)</p></div>
+
+                                    </div>
                                 </header>
                                 <form action="<?php echo base_url()?>/Home/internship_action" method="post" enctype="multipart/form-data">
                                     <div class="formFieldAndSubmitContainer px3 py1">

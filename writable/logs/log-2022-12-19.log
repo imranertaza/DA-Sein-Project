@@ -1,8 +1,0 @@
-CRITICAL - 2022-12-19 06:38:56 --> json_decode() expects parameter 1 to be string, array given
-in APPPATH\Controllers\Home.php on line 219.
- 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'json_decode() expects parameter 1 to be string, array given', 'APPPATH\\Controllers\\Home.php', 219, [...])
- 2 APPPATH\Controllers\Home.php(219): json_decode([...])
- 3 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->internship_action()
- 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
- 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

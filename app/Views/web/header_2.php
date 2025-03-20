@@ -10,8 +10,7 @@
     <base href="">
     <title>DA-SEIN</title>
 
-    <script type="text/javascript"
-            src="<?php echo base_url()?>/script/JMJ7fbRAdsMgeM96MKG4fF4lIMIjgkMfH6qJuAXbMs6FJMJ7fbRsdsMgeMt6MKG4fFilIMIj2kMfH6qJXhXbMs6sJMHbMprKtGqe_bpk2w6qqcsm2wns0ukneo6.js"></script>
+    <script type="text/javascript" src="<?php echo base_url()?>/script/JMJ7fbRAdsMgeM96MKG4fF4lIMIjgkMfH6qJuAXbMs6FJMJ7fbRsdsMgeMt6MKG4fFilIMIj2kMfH6qJXhXbMs6sJMHbMprKtGqe_bpk2w6qqcsm2wns0ukneo6.js"></script>
     <script type="text/javascript">try {
             Typekit.load();
         } catch (e) {

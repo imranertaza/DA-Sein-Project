@@ -1,6 +1,6 @@
 <main class="site-content" role="main" data-content-field="main-content">
     <section class="project-slideshow swiper-container" data-collection-id="627d19337eed7503b7c340f3">
-        <div class="swiper-wrapper">
+        <div class="swiper-wrapper stat">
             <?php foreach ($newsGallery as $val) { ?>
 
                 <div class="slide swiper-slide">

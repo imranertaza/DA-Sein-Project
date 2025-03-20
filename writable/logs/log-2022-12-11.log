@@ -1,9 +1,0 @@
-CRITICAL - 2022-12-11 00:04:26 --> syntax error, unexpected end of file
-in APPPATH\Views\web\office.php on line 1781.
- 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
- 2 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('web/office', [], true)
- 3 APPPATH\Controllers\Home.php(186): view('web/office', [...])
- 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->office()
- 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
- 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

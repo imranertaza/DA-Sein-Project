@@ -24,6 +24,9 @@
                             <div class="col-lg-12" style="margin-top: 20px;">
                                 <?php if (session()->getFlashdata('message') !== NULL) : echo session()->getFlashdata('message'); endif; ?>
                             </div>
+                            <div class="col-lg-12" style="margin-top: 20px;">
+                                <?php if (session()->getFlashdata('message2') !== NULL) : echo session()->getFlashdata('message2'); endif; ?>
+                            </div>
                         </div>
                     </div>
                     <!-- /.box-header -->
@@ -158,7 +161,7 @@
                     </div>
                     <div class="box-body">
                         <div class="row">
-                            <?php $i=1; $j=1; foreach ($work_image as $val) { ?>
+                            <?php $i=1; $j=1; foreach ($work_image as $val) { if (!empty($val->image)){ ?>
                                 <div class="col-md-4" style="margin-top: 10px;">
                                     <form action="<?php echo base_url() ?>/Admin/Work/update_image" method="post"
                                           enctype="multipart/form-data">
@@ -184,7 +187,7 @@
                                         </div>
                                     </form>
                                 </div>
-                            <?php } ?>
+                            <?php } } ?>
 
                             <div class="col-md-12" style="margin-top: 10px;">
                                 <form action="<?php echo base_url() ?>/Admin/Work/add_image" method="post"
@@ -198,6 +201,51 @@
                                         <input type="hidden" class="form-control" name="work_id" id="work_id"
                                                value="<?php echo $work->work_id; ?>"/>
                                         <button class="btn btn-primary">Add New Image</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="box-header">
+                        <h3 class="box-title">Video Update</h3>
+                    </div>
+                    <div class="box-body">
+                        <div class="row">
+                            <?php $i=1; $j=1; foreach ($work_image as $val) {
+                                if (!empty($val->video)){
+                                    $videoUrl = base_url('uploads/work_img/'.$val->work_id.'/'.$val->video);
+                            ?>
+                                <div class="col-md-4" style="margin-top: 10px;">
+                                    <div class="form-group">
+                                        <video width="250" height="150" controls>
+                                            <source src="<?php echo $videoUrl ?>" type="video/mp4">
+                                            <source src="<?php echo $videoUrl ?>" type="video/ogg">
+                                        </video>
+                                    </div>
+                                    <div class="form-group">
+                                        <a href="<?php echo base_url() ?>/Admin/Work/delete_video/<?php echo $val->work_gallary_id; ?>"
+                                           onclick="return confirm('Are you sure you want to Delete?')"
+                                           class="btn btn-danger">Delete</a>
+                                    </div>
+                                </div>
+                            <?php } } ?>
+
+                            <div class="col-md-12" style="margin-top: 10px;">
+                                <form action="<?php echo base_url() ?>/Admin/Work/add_video" method="post"
+                                      enctype="multipart/form-data">
+                                    <div class="form-group">
+                                        <label for="videos">Select videos:</label>
+                                        <input type="file" name="videos[]" id="videos" multiple accept="video/mp4,video/MOV,video/WEBM">
+                                        <br><span>Accept Video: MP4,MOV,WEBM</span>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="hidden" class="form-control" name="work_id" id="work_id"
+                                               value="<?php echo $work->work_id; ?>"/>
+                                        <button class="btn btn-primary">Add New Video</button>
                                     </div>
                                 </form>
                             </div>
