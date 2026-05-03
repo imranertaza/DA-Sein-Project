@@ -18,69 +18,23 @@
     <script type="text/javascript" nomodule="nomodule" src="<?php echo base_url()?>/_sqs/polyfiller/1.2.2/legacy.js"></script>
     <script type="text/javascript" src="<?php echo base_url()?>/_sqs/polyfiller/1.2.2/modern.js"></script>
     <script type="text/javascript">SQUARESPACE_ROLLUPS = {};</script>
-    <script>(function (rollups, name) {
-            if (!rollups[name]) {
-                rollups[name] = {};
-            }
-            rollups[name].js = ["//assets.squarespace.com/universal/scripts-compressed/extract-css-runtime-36f1eacd012a4f73874ec-min.en-US.js"];
-        })(SQUARESPACE_ROLLUPS, 'squarespace-extract_css_runtime');</script>
     <script src="<?php echo base_url()?>/universal/scripts-compressed/extract-css-runtime-36f1eacd012a4f73874ec-min.en-US.js"></script>
-    <script>(function (rollups, name) {
-            if (!rollups[name]) {
-                rollups[name] = {};
-            }
-            rollups[name].js = ["//assets.squarespace.com/universal/scripts-compressed/extract-css-moment-js-vendor-98bddc81dc37f44faa7b2-min.en-US.js"];
-        })(SQUARESPACE_ROLLUPS, 'squarespace-extract_css_moment_js_vendor');</script>
+
     <script src="<?php echo base_url()?>/universal/scripts-compressed/extract-css-moment-js-vendor-98bddc81dc37f44faa7b2-min.en-US.js"></script>
-    <script>(function (rollups, name) {
-            if (!rollups[name]) {
-                rollups[name] = {};
-            }
-            rollups[name].js = ["//assets.squarespace.com/universal/scripts-compressed/cldr-resource-pack-83b0e6eb9a2c7557ad4c0-min.en-US.js"];
-        })(SQUARESPACE_ROLLUPS, 'squarespace-cldr_resource_pack');</script>
+
     <script src="<?php echo base_url()?>/universal/scripts-compressed/cldr-resource-pack-83b0e6eb9a2c7557ad4c0-min.en-US.js"></script>
-    <script>(function (rollups, name) {
-            if (!rollups[name]) {
-                rollups[name] = {};
-            }
-            rollups[name].js = ["//assets.squarespace.com/universal/scripts-compressed/common-vendors-stable-9b2a74c45b27271fd111d-min.en-US.js"];
-        })(SQUARESPACE_ROLLUPS, 'squarespace-common_vendors_stable');</script>
+
     <script src="<?php echo base_url()?>/universal/scripts-compressed/common-vendors-stable-9b2a74c45b27271fd111d-min.en-US.js"></script>
-    <script>(function (rollups, name) {
-            if (!rollups[name]) {
-                rollups[name] = {};
-            }
-            rollups[name].js = ["//assets.squarespace.com/universal/scripts-compressed/common-vendors-96bc8712c3745d2ebe37e-min.en-US.js"];
-        })(SQUARESPACE_ROLLUPS, 'squarespace-common_vendors');</script>
+
     <script src="<?php echo base_url()?>/universal/scripts-compressed/common-vendors-96bc8712c3745d2ebe37e-min.en-US.js"></script>
-    <script>(function (rollups, name) {
-            if (!rollups[name]) {
-                rollups[name] = {};
-            }
-            rollups[name].js = ["//assets.squarespace.com/universal/scripts-compressed/common-e739758b0e95bd9579e23-min.en-US.js"];
-        })(SQUARESPACE_ROLLUPS, 'squarespace-common');</script>
+
     <script src="<?php echo base_url()?>/universal/scripts-compressed/common-e739758b0e95bd9579e23-min.en-US.js"></script>
-    <script>(function (rollups, name) {
-            if (!rollups[name]) {
-                rollups[name] = {};
-            }
-            rollups[name].js = ["//assets.squarespace.com/universal/scripts-compressed/user-account-core-1b8bceaacbe4616b0d51b-min.en-US.js"];
-        })(SQUARESPACE_ROLLUPS, 'squarespace-user_account_core');</script>
+
     <script src="<?php echo base_url()?>/universal/scripts-compressed/user-account-core-1b8bceaacbe4616b0d51b-min.en-US.js"></script>
-    <script>(function (rollups, name) {
-            if (!rollups[name]) {
-                rollups[name] = {};
-            }
-            rollups[name].css = ["//assets.squarespace.com/universal/styles-compressed/user-account-core-68c2f27a2a82c80680342-min.en-US.css"];
-        })(SQUARESPACE_ROLLUPS, 'squarespace-user_account_core');</script>
+
     <link rel="stylesheet" type="text/css"
           href="<?php echo base_url()?>/universal/styles-compressed/user-account-core-68c2f27a2a82c80680342-min.en-US.css">
-    <script>(function (rollups, name) {
-            if (!rollups[name]) {
-                rollups[name] = {};
-            }
-            rollups[name].js = ["//assets.squarespace.com/universal/scripts-compressed/performance-8b6f08d427d358ad6b72c-min.en-US.js"];
-        })(SQUARESPACE_ROLLUPS, 'squarespace-performance');</script>
+    
     <script src="<?php echo base_url()?>/universal/scripts-compressed/performance-8b6f08d427d358ad6b72c-min.en-US.js" defer></script>
     <script data-name="static-context">
         Static = window.Static || {};

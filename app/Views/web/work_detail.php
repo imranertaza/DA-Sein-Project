@@ -18,7 +18,7 @@
                     ?>
                 <div class="slide swiper-slide">
                     <div class="img-wrap cover p-ratio">
-                        <video width="695" height="391" controls>
+                        <video class="multi-video" width="695" height="391" controls autoplay muted playsinline loop >
                             <source src="<?php echo $videoUrl ?>" type="video/avi/mp4">
                             <source src="<?php echo $videoUrl ?>" type="video/ogg">
                         </video>
